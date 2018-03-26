@@ -71,7 +71,7 @@
         </v-list>
       </v-menu>
     </v-toolbar>
-    <main>
+    <v-content>
       <v-container class="pa-4" fluid="fluid">
         <v-alert v-bind="message" v-model="message.body" dismissible="dismissible">{{message.body}}</v-alert>
         <div class="py-2">
@@ -80,7 +80,7 @@
           </v-slide-y-transition>
         </div>
       </v-container>
-    </main>
+    </v-content>
   </v-app>
 </template>
 
