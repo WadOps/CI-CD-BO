@@ -30,7 +30,7 @@
                 <v-btn class="grey" dark="dark" @click.native="$root.back()"> 
                 <v-icon dark="dark" left="left">chevron_left </v-icon><span>Back</span>
                 </v-btn>
-                <v-btn primary="primary" dark="dark" type="submit" color="error">Submit
+                <v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit">Submit
                 <v-icon right="right" dark="dark">send</v-icon>
                 </v-btn>
             </div>
@@ -40,7 +40,7 @@
 </template>
 
 <script>
-
+import Api from "@/services/api";
 export default {
 
   data () {
@@ -55,11 +55,7 @@ export default {
                     }
                 ]
             }
-        ],
-      model: {},
-      fields: {},
-      rules: {},
-      messages: {}
+        ]
     }
   },
   computed: {
@@ -117,25 +113,21 @@ export default {
     updateFields () {
 
     },
-    // fetch () {
-    //   this.$http.get(`${this.resource}/form`, {
-    //     params: {id: this.id}
-    //   }).then(({data}) => {
-    //     this.model = data.model
-    //     this.fields = data.fields
-    //     this.rules = data.rules
-    //     this.messages = data.messages
-    //   })
-    // },
     onSubmit () {
-
+        Api.customApiParam("post", "/tests", this.questions)
+        .then(response => {
+            console.log(response.data)
+        })
+        .catch(err => {
+          console.log(err);
+        });
     },
-    onSuccess (data) {
-      this.$router.push({name: 'grid', params: {resource: this.resource}})
-      if (data.id) {
-        // this.$router.go(-1)
-      }
-    }
+    // onSuccess (data) {
+    //   this.$router.push({name: 'grid', params: {resource: this.resource}})
+    //   if (data.id) {
+    //     // this.$router.go(-1)
+    //   }
+    // }
   },
   created () {
     let pageTitle = (this.isEdit ? 'Update' : 'Create') + ' ' + global.helper.i.titleize(global.helper.i.singularize(this.resource))
