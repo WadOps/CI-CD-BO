@@ -26,9 +26,9 @@ const router = new Router({
 
     route('/', 'Main', null, [
       route('/', 'Home', 'home'),
-      // route('/crud/:resource', 'CrudGrid', 'grid'),
+      //route('/:resource', 'Grid', 'grid'),
       // route('/crud/:resource/:id/edit', 'CrudForm', 'edit'),
-      // route('/crud/:resource/create', 'CrudForm', 'create'),
+      route('/:resource/create', 'Form', 'create'),
       // route('/crud/:resource/:id/:action', 'CrudForm', 'action'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
       // route('/example', 'Example'),

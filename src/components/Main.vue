@@ -95,18 +95,12 @@ export default {
       theme: 'error',
       mini: false,
       drawer: true,
-      locales: ['en-US', 'zh-CN'],
-      colors: ['blue', 'green', 'purple', 'red']
     }
   },
   computed: {
     ...mapState(['message', 'menu', 'pageTitle'])
   },
   methods: {
-    changeLocale (to) {
-      global.helper.ls.set('locale', to)
-      this.$i18n.locale = to
-    },
     fetchMenu () {
       // fetch menu from server
       // this.$http.get('menu').then(({data}) => this.$store.commit('setMenu', data))

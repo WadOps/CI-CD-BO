@@ -8,8 +8,8 @@ import Vuex from 'vuex'
 import 'vuetify/dist/vuetify.min.css'
 import store from './store/'
 global.store = store
-// import helper from './helper/'
-// global.helper = helper
+import helper from './helper/'
+global.helper = helper
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
