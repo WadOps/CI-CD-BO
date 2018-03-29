@@ -20,6 +20,9 @@
                     </v-btn>
                 </v-flex>
             </v-layout>
+            <div class="my-4" slot="buttons">
+                <a :href="link"> {{link}} </a>
+            </div>
           </v-container>
     </v-flex>
     </v-layout>
@@ -33,7 +36,8 @@ export default {
     return {
         tests:[],
         chosentest:{},
-        email:""
+        email:"",
+        link:"",
     }
   },
   computed: {
@@ -81,11 +85,12 @@ export default {
 
     },
     onSubmit () {
-        Api.customApiParam("post", "", {
-
+        Api.customApiParam("post", "/generateurl", {
+            email:this.email,
+            id:this.chosentest.id
         })
         .then(response => {
-            console.log(response.data)
+            this.link=response.data.data
         })
         .catch(err => {
             console.log(err);

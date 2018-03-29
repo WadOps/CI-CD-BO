@@ -32,7 +32,7 @@ const router = new Router({
       route('/:resource/affecttest', 'Affect', 'affect'),
       // route('/:resource', 'GridAffect', 'affected_grid'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
-      // route('/example', 'Example'),
+      // route('/passtest/:idtest', 'pass_test'),
       // route('/settings', 'Settings'),
       // route('/theme', 'Theme'),
       // route('/chat', 'Chat'),
