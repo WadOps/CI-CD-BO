@@ -122,12 +122,12 @@ export default {
             console.log(err);
         });
     },
-    // onSuccess (data) {
-    //   this.$router.push({name: 'grid', params: {resource: this.resource}})
-    //   if (data.id) {
-    //     // this.$router.go(-1)
-    //   }
-    // }
+    onSuccess (data) {
+      this.$router.push({name: 'grid', params: {resource: this.resource}})
+      if (data.id) {
+        // this.$router.go(-1)
+      }
+    }
   },
   created () {
     let pageTitle = (this.isEdit ? 'Update' : 'Create') + ' ' + global.helper.i.titleize(global.helper.i.singularize(this.resource))
