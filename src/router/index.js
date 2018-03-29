@@ -26,10 +26,11 @@ const router = new Router({
 
     route('/', 'Main', null, [
       route('/', 'Home', 'home'),
-      //route('/:resource', 'Grid', 'grid'),
+      route('/:resource', 'Grid', 'grid'),
       // route('/crud/:resource/:id/edit', 'CrudForm', 'edit'),
       route('/:resource/create', 'Form', 'create'),
-      // route('/crud/:resource/:id/:action', 'CrudForm', 'action'),
+      // route('/:resource/affecttest', 'Affect', 'affect'),
+      // route('/:resource', 'Grid', 'affected_grid'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
       // route('/example', 'Example'),
       // route('/settings', 'Settings'),

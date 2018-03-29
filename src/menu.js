@@ -4,6 +4,8 @@ export default [
     // { 'href': '/crud/types', 'title': 'Types', 'icon': 'view_list' },
     { 'href': '/tests', 'title': 'Tests', 'icon': 'view_list' },
     { 'href': '/tests/create', 'title': 'Create Test', 'icon': 'note_add' },
+    { 'href': '/affectedtests', 'title': 'Affected Test', 'icon': 'assignment' },
+    { 'href': '/affectedtests/affecttest', 'title': 'Affect Test', 'icon': 'assignment_ind' },
   
     // { 'href': '/crud/comments', 'title': 'Comments', 'icon': 'view_list' },
     // { 'href': '/crud/users', 'title': 'Users', 'icon': 'people' },
