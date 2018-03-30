@@ -21,6 +21,7 @@ const router = new Router({
   routes: [
     // route('/login', 'Login', 'login'),
     // route('/error', 'Error', 'error'),
+    route('/passtest/:idtest', 'pass_test'),
 
     // path, file(*.vue), name, children
 
@@ -32,7 +33,6 @@ const router = new Router({
       route('/:resource/affecttest', 'Affect', 'affect'),
       // route('/:resource', 'GridAffect', 'affected_grid'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
-      // route('/passtest/:idtest', 'pass_test'),
       // route('/settings', 'Settings'),
       // route('/theme', 'Theme'),
       // route('/chat', 'Chat'),
