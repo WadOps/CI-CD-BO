@@ -18,7 +18,7 @@
         :search="search"
       >
         <template slot="items" slot-scope="props">
-          <td>{{ props.item.test }}</td>
+          <td>{{ props.item.affectedtest }}</td>
           <td class="text-xs-left">{{ props.item.email }}</td>
         </template>
         <v-alert slot="no-results" :value="true" color="error" icon="warning">
