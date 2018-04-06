@@ -20,10 +20,6 @@
         <template slot="items" slot-scope="props">
           <td>{{ props.item.id }}</td>
           <td class="text-xs-right">{{ props.item.createdAt }}</td>
-          <td class="text-xs-right">{{ props.item.fat }}</td>
-          <td class="text-xs-right">{{ props.item.carbs }}</td>
-          <td class="text-xs-right">{{ props.item.protein }}</td>
-          <td class="text-xs-right">{{ props.item.iron }}</td>
         </template>
         <v-alert slot="no-results" :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
@@ -55,7 +51,6 @@ export default {
   mounted() {
       Api.customApi("get", "/tests").then(response => {
       this.items = response.data.data;
-      console.log(this.items)
     });
   }
 }

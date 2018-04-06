@@ -16,7 +16,7 @@ Vue.use(Router)
 
 const router = new Router({
   base: __dirname,
-  mode: 'hash',
+  mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     // route('/login', 'Login', 'login'),

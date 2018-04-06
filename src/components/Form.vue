@@ -1,41 +1,39 @@
 <template>
     <v-layout>
-    <v-flex xs8="xs8">
-          <v-container fluid >
-            <v-layout row v-for="(question, index) in questions">
-                <v-flex xs4>
-                    <v-subheader>Question</v-subheader>
-                </v-flex>
-                <v-layout row >
-                    <v-layout align-center>
-                    <v-flex xs8 >
-                        <v-text-field
-                            name="input-7-1"
-                            :label="`Question ${index+1}`"
-                            multi-line
-                            v-model="question.desc"
-                        ></v-text-field>
-                        <v-layout align-center v-for="(answer, index) in question.answers">
-                            <v-checkbox hide-details class="shrink mr-2" v-model="answer.istrue"></v-checkbox>
-                            <v-text-field :label="`Answer ${index+1}`" v-model="answer.desc"></v-text-field>
-                             <v-btn fab dark small color="error" @click="addAnswer(question.answers)"> <v-icon dark>add</v-icon> </v-btn>
-                        </v-layout>
-                    </v-flex>
-                    <v-spacer></v-spacer>
-                    <v-btn fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
+        <v-container fluid warp>
+        <v-layout wrap align-center row v-for="(question, index) in questions">
+            <v-flex xs3>
+                <v-subheader>Question</v-subheader>
+            </v-flex>
+            <v-flex wrap>
+                <v-layout align-center>
+                <v-flex xs10>
+                    <v-text-field
+                        name="input-7-1"
+                        :label="`Question ${index+1}`"
+                        multi-line
+                        v-model="question.desc"
+                    ></v-text-field>
+                    <v-layout align-center v-for="(answer, index) in question.answers">
+                        <v-checkbox hide-details class="shrink mr-2" v-model="answer.istrue"></v-checkbox>
+                        <v-text-field :label="`Answer ${index+1}`" v-model="answer.desc"></v-text-field>
+                            <v-btn fab dark small color="error" @click="addAnswer(question.answers)"> <v-icon dark>add</v-icon> </v-btn>
                     </v-layout>
+                </v-flex>
+                <v-spacer></v-spacer>
+                <v-btn fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
                 </v-layout>
-            </v-layout>
-            <div class="my-4" slot="buttons">
-                <v-btn class="grey" dark="dark" @click.native="$root.back()"> 
-                <v-icon dark="dark" left="left">chevron_left </v-icon><span>Back</span>
-                </v-btn>
-                <v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit">Submit
-                <v-icon right="right" dark="dark">send</v-icon>
-                </v-btn>
-            </div>
-          </v-container>
-    </v-flex>
+            </v-flex>
+        </v-layout>
+        <div class="my-4" slot="buttons">
+            <v-btn class="grey" dark="dark" @click.native="$root.back()"> 
+            <v-icon dark="dark" left="left">chevron_left </v-icon><span>Back</span>
+            </v-btn>
+            <v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit">Submit
+            <v-icon right="right" dark="dark">send</v-icon>
+            </v-btn>
+        </div>
+        </v-container>
     </v-layout>
 </template>
 

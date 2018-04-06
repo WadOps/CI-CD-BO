@@ -18,8 +18,9 @@
         :search="search"
       >
         <template slot="items" slot-scope="props">
-          <td>{{ props.item.test }}</td>
+          <td>{{ props.item.affectedtest }}</td>
           <td class="text-xs-left">{{ props.item.email }}</td>
+          <td class="text-xs-left">{{ props.item.score }}</td>
         </template>
         <v-alert slot="no-results" :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
@@ -43,7 +44,8 @@ export default {
           sortable: false,
           value: ''
         },
-        { text: 'Candidate Email', value: '', align: 'left'}
+        { text: 'Candidate Email', value: '', align: 'left'},
+        { text: 'Candidate Score', value: '', align: 'left'}
       ],
       items: []
     }
@@ -51,7 +53,6 @@ export default {
   mounted() {
       Api.customApi("get", "/candidates").then(response => {
       this.items = response.data.data;
-      console.log(this.items)
     });
   }
 }
