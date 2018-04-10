@@ -1,29 +1,67 @@
 <template>
     <v-layout>
         <v-container fluid warp>
-        <v-layout wrap align-center row v-for="(question, index) in questions">
+        <v-layout wrap align-center row >
             <v-flex xs3>
-                <v-subheader>Question</v-subheader>
+                <v-subheader>Questions</v-subheader>
             </v-flex>
             <v-flex wrap>
-                <v-layout align-center>
-                <v-flex xs10>
-                    <v-text-field
-                        name="input-7-1"
-                        :label="`Question ${index+1}`"
-                        multi-line
-                        v-model="question.desc"
-                    ></v-text-field>
-                    <v-layout align-center v-for="(answer, index) in question.answers">
-                        <v-checkbox hide-details class="shrink mr-2" v-model="answer.istrue"></v-checkbox>
-                        <v-text-field :label="`Answer ${index+1}`" v-model="answer.desc"></v-text-field>
-                            <v-btn fab dark small color="error" @click="addAnswer(question.answers)"> <v-icon dark>add</v-icon> </v-btn>
-                    </v-layout>
-                </v-flex>
-                <v-spacer></v-spacer>
-                <v-btn fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
+                <v-layout align-center v-for="(question, index) in questions">
+                    <v-flex xs10>
+                        <v-text-field
+                            name="input-7-1"
+                            :label="`Question ${index+1}`"
+                            multi-line
+                            v-model="question.desc"
+                        ></v-text-field>
+                        <v-layout align-center v-for="(answer, index) in question.answers">
+                            <v-checkbox hide-details class="shrink mr-2" v-model="answer.istrue"></v-checkbox>
+                            <v-text-field :label="`Answer ${index+1}`" v-model="answer.desc"></v-text-field>
+                                <v-btn fab dark small color="error" @click="addAnswer(question.answers)"> <v-icon dark>add</v-icon> </v-btn>
+                        </v-layout>
+                    </v-flex>
+                    <v-spacer></v-spacer>
+                    <v-btn fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
                 </v-layout>
             </v-flex>
+        </v-layout>
+        <v-layout row align-center>
+            <v-flex xs3>
+                <v-subheader>Difficulty</v-subheader>
+            </v-flex>
+            <v-select
+                :items="diff"
+                v-model="test_diff"
+                label="Select difficulty"
+                single-line
+            ></v-select>
+        </v-layout>
+        <v-layout row align-center>
+            <v-flex xs3>
+                <v-subheader>Time Limit</v-subheader>
+            </v-flex>
+            <v-text-field
+                label=""
+                id="test"
+                min=0
+                max=60
+                step=1
+                maxlength=3
+                suffix="minutes"
+                v-model="time"
+            ></v-text-field>
+        </v-layout>
+        <v-layout row align-center>
+            <v-flex xs3>
+                <v-subheader>Technology</v-subheader>
+            </v-flex>
+            <v-select
+                v-model="techstack"
+                label="Select a technology"
+                multiple
+                tags
+                :items="techs"
+            ></v-select>
         </v-layout>
         <div class="my-4" slot="buttons">
             <v-btn class="grey" dark="dark" @click.native="$root.back()"> 
@@ -53,7 +91,20 @@ export default {
                     }
                 ]
             }
-        ]
+        ],
+        diff: [ 'Junior',
+                'Intermediate',
+                'Senior'
+        ],
+        test_diff: '',
+        time: null,
+        techs:[  'Javascript',
+                'Java',
+                'Ruby',
+                'Python'
+        ],
+        techstack: []
+
     }
   },
   computed: {
@@ -112,7 +163,7 @@ export default {
 
     },
     onSubmit () {
-        Api.customApiParam("post", "/tests", this.questions)
+        Api.customApiParam("post", "/tests", { questions: this.questions, diff: this.test_diff, timelimit: this.time, techstack: this.techstack })
         .then(response => {
             console.log(response.data)
         })
@@ -121,6 +172,7 @@ export default {
         });
     },
     onSuccess (data) {
+        console.log(this.resourc)
       this.$router.push({name: 'grid', params: {resource: this.resource}})
       if (data.id) {
         // this.$router.go(-1)
