@@ -21,7 +21,7 @@
                 </v-flex>
             </v-layout>
             <div class="my-4" slot="buttons">
-                <a :href="link"> {{link}} </a>
+                <a :href="'//' +link"> {{link}} </a>
             </div>
           </v-container>
     </v-flex>

@@ -1,18 +1,6 @@
 <template>
   <v-app :dark="dark" standalone="standalone">
     <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" persistent="persistent" enable-resize-watcher="enable-resize-watcher" :dark="dark" app>
-      <!--  .pa-3.text-xs-center(v-show="!mini")
-         div.display-2.py-4 Adminify
-         p {{$t('An admin dashboard based on Vuetify')}}
-         div(style="padding-left:5em")
-           v-switch(:label="(!dark ? 'Light' : 'Dark') + ' Theme'", v-model="dark", :dark="dark", hide-details)
-         div
-           v-btn(dark, tag="a", href="https://github.com/wxs77577/adminify", primary) 
-             v-icon(left, dark) star
-             span Github 
-       .pa-3.text-xs-center(v-show="mini")
-         .display-2 A
-       v-divider -->
       <v-list dense="dense">
         <template v-for="item in menu">
           <v-list-group v-if="item.items" v-bind:group="item.group">
@@ -55,20 +43,12 @@
     <v-toolbar class="darken-1" fixed="fixed" dark="dark" :class="theme" app> 
       <v-toolbar-side-icon dark="dark" @click.native.stop="drawer = !drawer"></v-toolbar-side-icon>
       <v-toolbar-title>{{pageTitle}}</v-toolbar-title>
-      <v-spacer>   </v-spacer>
-       <!-- v-menu(offset-y)
-       v-btn(icon, dark, slot="activator")
-         v-icon(dark) language
-       v-list
-         v-list-tile(v-for="lang in locales" :key="lang",@mouseover.native="changeLocale(lang)")
-           v-list-tile-title {{lang}} -->
+      <v-spacer></v-spacer>
       <v-menu offset-y="offset-y">
-        <v-btn icon="icon" dark="dark" slot="activator">
-          <v-icon dark="dark">format_paint</v-icon>
+        <v-btn icon="icon" dark="dark" slot="activator" @click="changetheme()">
+          <v-icon dark="dark" v-if="!dark" >brightness_3</v-icon>
+          <v-icon dark="dark" v-if="dark" >wb_sunny</v-icon>
         </v-btn>
-        <v-list>
-          <v-switch :label="(!dark ? 'Light' : 'Dark') + ' Theme'" v-model="dark" hide-details="hide-details"></v-switch>
-        </v-list>
       </v-menu>
     </v-toolbar>
     <v-content>
@@ -101,14 +81,9 @@ export default {
     ...mapState(['message', 'menu', 'pageTitle'])
   },
   methods: {
-    fetchMenu () {
-      // fetch menu from server
-      // this.$http.get('menu').then(({data}) => this.$store.commit('setMenu', data))
+    changetheme() {
+      this.dark=!this.dark
     }
-  },
-
-  created () {
-    this.fetchMenu()
   }
 }
 </script>

@@ -19,11 +19,9 @@
       >
         <template slot="items" slot-scope="props">
           <td>{{ props.item.id }}</td>
-          <td class="text-xs-right">{{ props.item.createdAt }}</td>
-          <td class="text-xs-right">{{ props.item.fat }}</td>
-          <td class="text-xs-right">{{ props.item.carbs }}</td>
-          <td class="text-xs-right">{{ props.item.protein }}</td>
-          <td class="text-xs-right">{{ props.item.iron }}</td>
+          <td >{{ props.item.createdAt }}</td>
+          <td >{{ props.item.difficulty }}</td>
+          <td v-for="(tech, index) in props.item.techstack">{{ tech }}</td>
         </template>
         <v-alert slot="no-results" :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
@@ -45,9 +43,11 @@ export default {
           text: 'id',
           align: 'left',
           sortable: false,
-          value: ''
+          value: 'id'
         },
-        { text: 'Created at', value: '' }
+        { text: 'Created at', value: 'createdAt', sortable: false, },
+        { text: 'Difficulty', value: 'difficulty', sortable: false, },
+        { text: 'Technology', value: 'techstack', sortable: false, }
       ],
       items: []
     }
@@ -55,7 +55,6 @@ export default {
   mounted() {
       Api.customApi("get", "/tests").then(response => {
       this.items = response.data.data;
-      console.log(this.items)
     });
   }
 }

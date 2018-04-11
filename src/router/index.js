@@ -16,7 +16,7 @@ Vue.use(Router)
 
 const router = new Router({
   base: __dirname,
-  mode: 'hash',
+  mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     // route('/login', 'Login', 'login'),
@@ -28,15 +28,10 @@ const router = new Router({
     route('/', 'Main', null, [
       route('/', 'Home', 'home'),
       route('/:resource', 'Grid', 'grid'),
-      // route('/crud/:resource/:id/edit', 'CrudForm', 'edit'),
       route('/:resource/create', 'Form', 'create'),
       route('/:resource/affecttest', 'Affect', 'affect'),
       route('/:resource/grid', 'GridAffect', 'affected_grid'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
-      // route('/settings', 'Settings'),
-      // route('/theme', 'Theme'),
-      // route('/chat', 'Chat'),
-      // route('/about', 'About')
     ])
 
     // Global redirect for 404
