@@ -18,27 +18,28 @@
         :search="search"
       >
         <template slot="items" slot-scope="props">
-          <td>{{ props.item.affectedtest.id }}</td>
-          <td class="text-xs-left">{{ props.item.email }}</td>
-          <td class="text-xs-left">{{ props.item.score }}</td>
+          <td>{{ props.item.test.id }}</td>
+          <td >{{ props.item.candidate.email }}</td>
+          <td >{{ props.item.candidate.score }}</td>
+          <td >{{ momentit(props.item.createdAt) }}</td>
           <td class="justify-center layout px-0">
             <v-btn icon class="mx-0" @click.stop="dialog = true">
               <v-icon color="gray">visibility</v-icon>
             </v-btn>
              <v-dialog v-model="dialog" max-width="800px">
               <v-card>
-                 <v-layout row align-center class="pr-2" v-for="(answer, index) in props.item.answers">
+                 <v-layout row align-center class="pr-2" v-for="(qst, index) in props.item.qsts">
                   <v-card-text>
                     Question {{index+1}} : 
-                      <v-flex>
-                        question
+                      <v-flex v-html="markit(qst[0].desc)">
+                        <!-- {{qst[0].desc}} -->
                       </v-flex>
                   </v-card-text>
                   <v-card-text>
-                    Answer : {{answer.desc}}
+                    Answer : {{qst[1].desc}}
                   </v-card-text>
-                  <v-icon color="green" v-if="answer.istrue">done</v-icon>
-                  <v-icon color="red" v-if="!answer.istrue">clear</v-icon>
+                  <v-icon color="green" v-if="qst[1].istrue">done</v-icon>
+                  <v-icon color="red" v-if="!qst[1].istrue">clear</v-icon>
                  </v-layout>
                 <v-card-actions>
                   <v-btn color="primary" flat @click.stop="dialog2=false">Close</v-btn>
@@ -63,7 +64,9 @@
 </template>
 
 <script>
-import Api from "@/services/api";
+import Api from "@/services/api"
+var marked = require('marked')
+import moment from "moment";
 export default {
   data () {
     return {
@@ -74,19 +77,30 @@ export default {
           text: 'id test',
           align: 'left',
           sortable: false,
-          value: ''
+          value: 'test.id'
         },
-        { text: 'Candidate Email', value: '', align: 'left'},
-        { text: 'Candidate Score', value: '', align: 'left'}
+        { text: 'Candidate Email', value: 'candidate.email', sortable: false,},
+        { text: 'Candidate Score', value: 'candidate.score', sortable: false,},
+        { text: 'challenge finished at', value: 'createdAt', sortable: false,}
       ],
       items: []
     }
   },
   mounted() {
-      Api.customApi("get", "/candidates").then(response => {
+    Api.customApi("get", "/passedtests").then(response => {
       this.items = response.data.data;
     });
+  },
+
+  methods: {
+    momentit(time) {
+      return moment(time).format('llll')
+    },
+    markit(text) {
+      return marked(text)
+    }
   }
+    
 }
 
 </script>
