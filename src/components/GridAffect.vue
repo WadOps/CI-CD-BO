@@ -20,7 +20,7 @@
         <template slot="items" slot-scope="props">
           <td>{{ props.item.test.id }}</td>
           <td >{{ props.item.candidate.email }}</td>
-          <td >{{ props.item.candidate.score }}</td>
+          <td >{{ props.item.score }}</td>
           <td >{{ momentit(props.item.starttime) }}</td>
           <td >{{ momentit(props.item.createdAt) }}</td>
           <td class="justify-center layout px-0">
