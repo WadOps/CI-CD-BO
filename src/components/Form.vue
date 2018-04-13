@@ -13,7 +13,17 @@
                             :label="`Question ${index+1}`"
                             multi-line
                             v-model="question.desc"
+                            :append-icon="'visibility'"
+                            :append-icon-cb="() => (dialog = !dialog)"
                         ></v-text-field>
+                        <v-dialog v-model="dialog" max-width="700px">
+                            <v-card dark>
+                                <v-card-text><p v-html="markit(question.desc)"></p></v-card-text>
+                                <v-card-actions>
+                                <v-btn color="primary" flat @click.stop="dialog=false">Close</v-btn>
+                                </v-card-actions>
+                            </v-card>
+                        </v-dialog>
                         <v-layout align-center v-for="(answer, index) in question.answers">
                             <v-checkbox hide-details class="shrink mr-2" v-model="answer.istrue"></v-checkbox>
                             <v-text-field :label="`Answer ${index+1}`" v-model="answer.desc"></v-text-field>
@@ -85,6 +95,7 @@
 
 <script>
 import Api from "@/services/api";
+var marked = require('marked')
 export default {
 
   data () {
@@ -113,7 +124,8 @@ export default {
         ],
         techstack: [],
         error: '',
-        showerror: false
+        showerror: false,
+        dialog: false
 
     }
   },
@@ -194,7 +206,10 @@ export default {
     showError(err) {
         this.error=err
         this.showerror = true
-    }
+    },
+    markit(text) {
+        return marked(text)
+    },
   },
   created () {
     let pageTitle = (this.isEdit ? 'Update' : 'Create') + ' ' + global.helper.i.titleize(global.helper.i.singularize(this.resource))
