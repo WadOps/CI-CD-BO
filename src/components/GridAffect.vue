@@ -42,7 +42,7 @@
                   <v-icon color="red" v-if="!qst[1].istrue">clear</v-icon>
                  </v-layout>
                 <v-card-actions>
-                  <v-btn color="primary" flat @click.stop="dialog2=false">Close</v-btn>
+                  <v-btn color="primary" flat @click.stop="dialog=false">Close</v-btn>
                 </v-card-actions>
               </v-card>
             </v-dialog>
