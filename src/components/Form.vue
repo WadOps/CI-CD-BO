@@ -71,6 +71,14 @@
             <v-icon right="right" dark="dark">send</v-icon>
             </v-btn>
         </div>
+        <v-snackbar
+            :timeout=6000
+            :top=true
+            v-model="showerror"
+            >
+            {{ error }}
+            <v-btn flat color="error" @click.native="showerror = false">Close</v-btn>
+        </v-snackbar>
         </v-container>
     </v-layout>
 </template>
@@ -103,7 +111,9 @@ export default {
                 'Ruby',
                 'Python'
         ],
-        techstack: []
+        techstack: [],
+        error: '',
+        showerror: false
 
     }
   },
@@ -165,27 +175,34 @@ export default {
     onSubmit () {
         Api.customApiParam("post", "/tests", { questions: this.questions, diff: this.test_diff, timelimit: this.time, techstack: this.techstack })
         .then(response => {
-            console.log(response.data)
+            if(response.data.success == true) {
+                this.onSuccess(response.data)
+            } else {
+                this.showError(response.data.data)
+            }
         })
         .catch(err => {
             console.log(err);
         });
     },
     onSuccess (data) {
-        console.log(this.resourc)
-      this.$router.push({name: 'grid', params: {resource: this.resource}})
-      if (data.id) {
-        // this.$router.go(-1)
+        this.$router.push({name: 'grid', params: {resource: this.resource}})
+        if (data.id) {
+            // this.$router.go(-1)
       }
+    },
+    showError(err) {
+        this.error=err
+        this.showerror = true
     }
   },
   created () {
     let pageTitle = (this.isEdit ? 'Update' : 'Create') + ' ' + global.helper.i.titleize(global.helper.i.singularize(this.resource))
     this.$store.commit('setPageTitle', pageTitle)
   },
-  mounted () {
-    // this.$bus.showMessage('success', 'success')
-    // this.fetch()
-  }
+//   mounted () {
+//     // this.$bus.showMessage('success', 'success')
+//     // this.fetch()
+//   }
 }
 </script>

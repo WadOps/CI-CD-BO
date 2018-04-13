@@ -26,7 +26,7 @@
           </v-list-group>
           <v-subheader v-else-if="item.header">{{ item.header }}</v-subheader>
           <v-divider v-else-if="item.divider"></v-divider>
-          <v-list-tile v-else="v-else" :to="item.href" router="router" ripple="ripple" v-bind:disabled="item.disabled" :title="item.title">
+          <v-list-tile v-else :to="item.href" router="router" ripple="ripple" v-bind:disabled="item.disabled" :title="item.title">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>

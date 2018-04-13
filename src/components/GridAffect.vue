@@ -1,5 +1,4 @@
 <template>
-  <v-app id="inspire">
     <v-card>
       <v-card-title>
         Affected Tests
@@ -24,12 +23,12 @@
           <td >{{ momentit(props.item.starttime) }}</td>
           <td >{{ momentit(props.item.createdAt) }}</td>
           <td class="justify-center layout px-0">
-            <v-btn icon class="mx-0" @click.stop="dialog = true">
+            <v-btn icon class="mx-0" @click.stop="showanswers(props.item.qsts)">
               <v-icon color="gray">visibility</v-icon>
             </v-btn>
              <v-dialog v-model="dialog" max-width="800px">
               <v-card>
-                 <v-layout row align-center class="pr-2" v-for="(qst, index) in props.item.qsts">
+                 <v-layout row align-center class="pr-2" v-for="(qst, index) in qstsAnswers">
                   <v-card-text>
                     Question {{index+1}} : 
                       <v-flex v-html="markit(qst[0].desc)">
@@ -60,7 +59,6 @@
         </v-alert>
       </v-data-table>
     </v-card>
-  </v-app>
 
 </template>
 
@@ -85,7 +83,8 @@ export default {
         { text: 'Challenge started at', value: 'createdAt', sortable: false,},
         { text: 'Challenge finished at', value: 'createdAt', sortable: false,}
       ],
-      items: []
+      items: [],
+      qstsAnswers: []
     }
   },
   mounted() {
@@ -100,6 +99,10 @@ export default {
     },
     markit(text) {
       return marked(text)
+    },
+    showanswers(asws) {
+      this.qstsAnswers = asws
+      this.dialog = true
     }
   }
     

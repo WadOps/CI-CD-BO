@@ -69,7 +69,6 @@ export default {
   mounted() {
       Api.customApi("get", "/tests").then(response => {
       this.tests = response.data.data;
-      console.log(this.tests)
       });
   },
   methods: {

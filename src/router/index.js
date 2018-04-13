@@ -27,10 +27,10 @@ const router = new Router({
 
     route('/', 'Main', null, [
       route('/', 'Home', 'home'),
-      route('/:resource', 'Grid', 'grid'),
+      route('/:resource/grid', 'Grid', 'grid'),
       route('/:resource/create', 'Form', 'create'),
       route('/:resource/affecttest', 'Affect', 'affect'),
-      route('/:resource/grid', 'GridAffect', 'affected_grid'),
+      route('/:resource/gridaffect', 'GridAffect', 'affected_grid'),
       // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
     ])
 

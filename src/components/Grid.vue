@@ -1,5 +1,4 @@
 <template>
-  <v-app id="inspire">
     <v-card>
       <v-card-title>
         Tests
@@ -19,21 +18,21 @@
       >
         <template slot="items" slot-scope="props">
           <td>{{ props.item.id }}</td>
-          <td >{{ props.item.createdAt }}</td>
+          <td >{{ momentit(props.item.createdAt) }}</td>
           <td >{{ props.item.difficulty }}</td>
-          <td v-for="(tech, index) in props.item.techstack">{{ tech }}</td>
+          <td ><v-chip v-for="(tech, index) in props.item.techstack">{{ tech }}</v-chip></td>
         </template>
         <v-alert slot="no-results" :value="true" color="error" icon="warning">
           Your search for "{{ search }}" found no results.
         </v-alert>
       </v-data-table>
     </v-card>
-  </v-app>
 
 </template>
 
 <script>
 import Api from "@/services/api";
+import moment from "moment"
 export default {
   data () {
     return {
@@ -55,7 +54,12 @@ export default {
   mounted() {
       Api.customApi("get", "/tests").then(response => {
       this.items = response.data.data;
-    });
+    })
+  },
+  methods: {
+    momentit(time) {
+      return moment(time).format('llll')
+    }
   }
 }
 
