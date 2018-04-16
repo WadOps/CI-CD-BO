@@ -15,6 +15,34 @@
                 </v-flex>
                 <v-spacer></v-spacer>
                 <v-flex>
+                    <v-menu
+                      ref="menu"
+                      lazy
+                      :close-on-content-click="false"
+                      v-model="menu"
+                      transition="scale-transition"
+                      offset-y
+                      full-width
+                      :nudge-right="40"
+                      min-width="290px"
+                      :return-value.sync="expdate"
+                    >
+                      <v-text-field
+                        slot="activator"
+                        label="Expiration invitation day"
+                        v-model="expdate"
+                        prepend-icon="event"
+                        readonly
+                      ></v-text-field>
+                      <v-date-picker v-model="expdate" no-title scrollable  :min="allowedDates()">
+                        <v-spacer></v-spacer>
+                        <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
+                        <v-btn flat color="primary" @click="$refs.menu.save(expdate)">OK</v-btn>
+                      </v-date-picker>
+                    </v-menu>
+                </v-flex>
+                <v-spacer></v-spacer>
+                <v-flex>
                     <v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit">Affect
                     <v-icon right="right" dark="dark">send</v-icon>
                     </v-btn>
@@ -30,6 +58,7 @@
 
 <script>
 import Api from "@/services/api";
+import moment from "moment"
 export default {
 
   data () {
@@ -38,6 +67,8 @@ export default {
         chosentest:{},
         email:"",
         link:"",
+        expdate: null,
+        menu: false
     }
   },
   computed: {
@@ -86,7 +117,8 @@ export default {
     onSubmit () {
         Api.customApiParam("post", "/generateurl", {
             email:this.email,
-            id:this.chosentest.id
+            id:this.chosentest.id,
+            expdate: this.expdate
         })
         .then(response => {
             this.link=response.data.data
@@ -100,6 +132,9 @@ export default {
       if (data.id) {
         // this.$router.go(-1)
       }
+    },
+    allowedDates () {
+      return moment().format("YYYY-MM-DD"); 
     }
   },
   created () {
