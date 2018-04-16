@@ -32,7 +32,6 @@
                   <v-card-text>
                     Question {{index+1}} : 
                       <v-flex v-html="markit(qst[0].desc)">
-                        <!-- {{qst[0].desc}} -->
                       </v-flex>
                   </v-card-text>
                   <v-card-text>

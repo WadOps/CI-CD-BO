@@ -10,8 +10,11 @@
                     <v-select :items="tests" v-model="chosentest" item-text="id" label="Tests" autocomplete></v-select>
                 </v-flex>
                 <v-spacer></v-spacer>
-                <v-flex>
+                <!-- <v-flex>
                     <v-text-field label="Condidat Email" v-model="email"></v-text-field>
+                </v-flex> -->
+                <v-flex>
+                    <v-select :items="candidates" v-model="email" item-text="email" label="Emails" autocomplete></v-select>
                 </v-flex>
                 <v-spacer></v-spacer>
                 <v-flex>
@@ -63,10 +66,11 @@ export default {
 
   data () {
     return {
-        tests:[],
-        chosentest:{},
-        email:"",
-        link:"",
+        tests: [],
+        candidates: [],
+        chosentest: {},
+        chosencandidate: {},
+        link: "",
         expdate: null,
         menu: false
     }
@@ -99,7 +103,10 @@ export default {
   },
   mounted() {
       Api.customApi("get", "/tests").then(response => {
-      this.tests = response.data.data;
+        this.tests = response.data.data;
+      });
+      Api.customApi("get", "/candidates").then(response => {
+        this.candidates = response.data.data;
       });
   },
   methods: {
@@ -116,7 +123,7 @@ export default {
     },
     onSubmit () {
         Api.customApiParam("post", "/generateurl", {
-            email:this.email,
+            email:chosencandidate.email,
             id:this.chosentest.id,
             expdate: this.expdate
         })

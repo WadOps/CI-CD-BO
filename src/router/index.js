@@ -31,7 +31,7 @@ const router = new Router({
       route('/:resource/create', 'Form', 'create'),
       route('/:resource/affecttest', 'Affect', 'affect'),
       route('/:resource/gridaffect', 'GridAffect', 'affected_grid'),
-      // route('/crud/:resource/:action', 'CrudForm', 'indexAction'),
+      route('/:resource/:action', 'CandidateForm', 'indexAction'),
     ])
 
     // Global redirect for 404
