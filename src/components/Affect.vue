@@ -14,7 +14,7 @@
                     <v-text-field label="Condidat Email" v-model="email"></v-text-field>
                 </v-flex> -->
                 <v-flex>
-                    <v-select :items="candidates" v-model="email" item-text="email" label="Emails" autocomplete></v-select>
+                    <v-select :items="candidates" v-model="chosencandidate" item-text="email" label="Emails" autocomplete></v-select>
                 </v-flex>
                 <v-spacer></v-spacer>
                 <v-flex>
@@ -123,7 +123,7 @@ export default {
     },
     onSubmit () {
         Api.customApiParam("post", "/generateurl", {
-            email:chosencandidate.email,
+            email: this.chosencandidate.email,
             id:this.chosentest.id,
             expdate: this.expdate
         })

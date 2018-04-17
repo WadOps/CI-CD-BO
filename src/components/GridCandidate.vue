@@ -88,7 +88,7 @@ export default {
     deleteItem() {
         Api.customApiParam("post", "/candidates/delete",{
             candidate: this.chosenCandidate
-        }).then(response => {
+        }).then((response) => {
             if(response.data.success==true)
                 Api.customApi("get", "/candidates").then(response => {
                     this.items = response.data.data;

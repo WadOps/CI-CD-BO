@@ -20,8 +20,9 @@
           <td>{{ props.item.test.id }}</td>
           <td >{{ props.item.candidate.email }}</td>
           <td >{{ props.item.score }}</td>
-          <td >{{ momentit(props.item.starttime) }}</td>
+          <!-- <td >{{ momentit(props.item.starttime) }}</td> -->
           <td >{{ momentit(props.item.createdAt) }}</td>
+          <td >{{ momentit(props.item.updatedAt) }}</td>
           <td class="justify-center layout px-0">
             <v-btn icon class="mx-0" @click.stop="showanswers(props.item.qsts)">
               <v-icon color="gray">visibility</v-icon>
@@ -80,7 +81,7 @@ export default {
         { text: 'Candidate Email', value: 'candidate.email', sortable: false,},
         { text: 'Candidate Score', value: 'candidate.score', sortable: false,},
         { text: 'Challenge started at', value: 'createdAt', sortable: false,},
-        { text: 'Challenge finished at', value: 'createdAt', sortable: false,}
+        { text: 'Challenge finished at', value: 'updatedAt', sortable: false,}
       ],
       items: [],
       qstsAnswers: []
