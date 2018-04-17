@@ -26,7 +26,7 @@
             <v-btn icon class="mx-0" @click.stop="showanswers(props.item.qsts)">
               <v-icon color="gray">visibility</v-icon>
             </v-btn>
-             <v-dialog v-model="dialog" max-width="800px">
+            <v-dialog v-model="dialog" max-width="800px">
               <v-card>
                  <v-layout row align-center class="pr-2" v-for="(qst, index) in qstsAnswers">
                   <v-card-text>

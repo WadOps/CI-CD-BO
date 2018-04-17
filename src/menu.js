@@ -6,7 +6,8 @@ export default [
     { 'href': '/tests/create', 'title': 'Create Test', 'icon': 'note_add' },
     { 'href': '/affectedtests/gridaffect', 'title': 'Affected Test', 'icon': 'assignment' },
     { 'href': '/affectedtests/affecttest', 'title': 'Affect Test', 'icon': 'assignment_ind' },
-    { 'href': '/candidates/add', 'title': 'Add Candidate', 'icon': 'person_add' },
+    { 'href': '/candidates/crud/add', 'title': 'Add Candidate', 'icon': 'person_add' },
+    { 'href': '/candidates/gridcandidates', 'title': 'Candidates', 'icon': 'people' },
   
     // { 'href': '/crud/comments', 'title': 'Comments', 'icon': 'view_list' },
     // { 'href': '/crud/users', 'title': 'Users', 'icon': 'people' },
