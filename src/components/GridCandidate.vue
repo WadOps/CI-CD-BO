@@ -22,9 +22,14 @@
             <td >{{ props.item.email }}</td>
             <td >{{ momentit(props.item.createdAt) }}</td>
             <td class="justify-center layout px-0">
-                <v-btn icon class="mx-0" @click="editItem(props.item)">
+                <v-btn icon class="mx-0" @click="/*editItem(props.item)*/showformdialog(props.item)">
                     <v-icon color="teal">edit</v-icon>
                 </v-btn>
+                <v-dialog v-model="formdialog">
+                  <v-card>
+                    <formcandidate :id="chosenCandidate.id" :email="chosenCandidate.email" :name="chosenCandidate.name" @disabledialog="updatedItem()"></formcandidate>
+                  </v-card>
+                </v-dialog>
                 <v-btn icon class="mx-0" @click="showdialog(props.item)">
                     <v-icon color="pink">delete</v-icon>
                 </v-btn>
@@ -32,6 +37,9 @@
                     <v-card>
                         <v-card-text class="title">
                             Are you sure?
+                            <v-card-text class="subheading">
+                                <v-icon>warning</v-icon> it will delete all candidate Passed Tests !
+                            </v-card-text>
                         </v-card-text>
                         <v-card-actions>
                             <v-btn color="primary" flat @click.stop="deleteItem()">Sure !</v-btn>
@@ -52,7 +60,11 @@
 <script>
 import Api from "@/services/api";
 import moment from "moment"
+import formcandidate from "./CandidateForm";
 export default {
+  components: {
+    formcandidate
+  },
   data () {
     return {
       search: '',
@@ -69,6 +81,7 @@ export default {
       ],
       items: [],
       dialog: false,
+      formdialog: false,
       chosenCandidate: {}
     }
   },
@@ -85,8 +98,12 @@ export default {
       this.chosenCandidate = candidate
       this.dialog = true
     },
+    showformdialog(candidate) {
+      this.chosenCandidate = candidate
+      this.formdialog = true
+    },
     deleteItem() {
-        Api.customApiParam("post", "/candidates/delete",{
+        Api.customApiParam("delete", "/candidates/crud",{
             candidate: this.chosenCandidate
         }).then((response) => {
             if(response.data.success==true)
@@ -95,6 +112,12 @@ export default {
                 })
         })
         this.dialog = false
+    },
+    updatedItem() {
+      	Api.customApi("get", "/candidates").then(response => {
+            this.items = response.data.data;
+		})
+		this.formdialog = false
     }
   }
 }

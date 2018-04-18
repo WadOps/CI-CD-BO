@@ -10,6 +10,8 @@ export default {
     customApiParam(method, url, obj) {
         return axios.create({
             baseURL: `http://localhost:1337`
-        })[method](url, obj)
+        })[method](url, obj).catch((err) => {
+            console.log(err)
+        })
     }
 }
