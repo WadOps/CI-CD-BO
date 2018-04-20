@@ -30,30 +30,78 @@
                       min-width="290px"
                       :return-value.sync="expdate"
                     >
-                      <v-text-field
-                        slot="activator"
-                        label="Expiration invitation day"
-                        v-model="expdate"
-                        prepend-icon="event"
-                        readonly
-                      ></v-text-field>
-                      <v-date-picker v-model="expdate" no-title scrollable  :min="allowedDates()">
-                        <v-spacer></v-spacer>
-                        <v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
-                        <v-btn flat color="primary" @click="$refs.menu.save(expdate)">OK</v-btn>
-                      </v-date-picker>
+						<v-text-field
+							slot="activator"
+							label="Expiration invitation day"
+							v-model="expdate"
+							prepend-icon="event"
+							readonly
+						></v-text-field>
+						<v-date-picker v-model="expdate" no-title scrollable :min="allowedDates()">
+							<v-spacer></v-spacer>
+							<v-btn flat color="primary" @click="menu = false">Cancel</v-btn>
+							<v-btn flat color="primary" @click="$refs.menu.save(expdate)">OK</v-btn>
+						</v-date-picker>
                     </v-menu>
                 </v-flex>
                 <v-spacer></v-spacer>
                 <v-flex>
                     <v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit">Affect
-                    <v-icon right="right" dark="dark">send</v-icon>
+                    	<v-icon right="right" dark="dark">send</v-icon>
                     </v-btn>
                 </v-flex>
             </v-layout>
-            <div class="my-4" slot="buttons">
-                <a :href="'//' +link"> {{link}} </a>
-            </div>
+			<div class="my-4" slot="buttons">
+				<a :href="'//' +link"> {{link}} </a>
+			</div>
+			<v-layout wrap v-if="!!link">
+				<v-flex xs2>
+					<v-subheader>To</v-subheader>
+				</v-flex>
+				<v-flex xs10 class="text-xs-right">
+					<v-chip>
+						<v-avatar class="error">{{chosencandidate.email.charAt(0)}}</v-avatar>
+						{{chosencandidate.email}}
+					</v-chip>
+				</v-flex>
+				<v-flex xs12>
+					<v-divider></v-divider>
+					<v-text-field
+					label="Subject"
+					v-model="subject"
+					single-line
+					full-width
+					hide-details
+					></v-text-field>
+				</v-flex>
+				<v-flex xs12>
+					<v-divider></v-divider>
+					<v-text-field
+					label="Message"
+					:value="this.getmessage"
+					v-model="message"
+					counter=500
+					max="500"
+					full-width
+					multi-line
+					single-line
+					auto-grow
+					>
+					</v-text-field>
+					<v-text-field
+					:value="this.link"
+					disabled
+					multi-line
+					single-line
+					full-width
+					hide-details
+					auto-grow
+					></v-text-field>
+				</v-flex>
+				<v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSend">Send
+					<v-icon right="right" dark="dark">send</v-icon>
+				</v-btn>
+			</v-layout>
           </v-container>
     </v-flex>
     </v-layout>
@@ -72,7 +120,9 @@ export default {
         chosencandidate: {},
         link: "",
         expdate: null,
-        menu: false
+        menu: false,
+        message : "",
+        subject: "Invitation to Hidden Founders assessment"
     }
   },
   computed: {
@@ -94,7 +144,11 @@ export default {
     },
     id () {
       return this.$route.params.id
-    }
+    },
+	getmessage () {
+		this.message = `This is your link to pass the assessment, it will expire in ${this.expdate}`
+		return this.message
+	}
 
   },
   watch: {
@@ -142,7 +196,16 @@ export default {
     },
     allowedDates () {
       return moment().format("YYYY-MM-DD"); 
-    }
+    },
+	onSend() {
+		Api.customApiParam("post", "/sendmail", {
+			link: this.link,
+			name: this.chosencandidate.name,
+            email: this.chosencandidate.email,
+            message: this.message,
+			subject: this.subject
+        })
+	}
   },
   created () {
     let pageTitle = (this.isEdit ? 'Update' : 'Create') + ' ' + global.helper.i.titleize(global.helper.i.singularize(this.resource))

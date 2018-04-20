@@ -103,9 +103,7 @@ export default {
       this.formdialog = true
     },
     deleteItem() {
-        Api.customApiParam("delete", "/candidates/crud",{
-            candidate: this.chosenCandidate
-        }).then((response) => {
+        Api.customApi("delete", "/candidates/crud/"+this.chosenCandidate.id).then((response) => {
             if(response.data.success==true)
                 Api.customApi("get", "/candidates").then(response => {
                     this.items = response.data.data;
