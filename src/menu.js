@@ -7,9 +7,9 @@ export default [
     { 'href': '/affectedtests/affecttest', 'title': 'Affected Test', 'icon': 'today' },
     { 'href': '/affectedtests/gridaffect', 'title': 'Affect Test', 'icon': 'insert_invitation' },
     { 'href': '/candidates/formcandidate', 'title': 'Add Candidate', 'icon': 'person_add' },
-    { 'href': '/candidates/gridcandidate', 'title': 'Candidates', 'icon': 'people' },
+    { 'href': '/candidates/gridcandidates', 'title': 'Candidates', 'icon': 'people' },
     { 'href': '/assessments/formassessment', 'title': 'Create Assessment', 'icon': 'assignment_ind' },
-    // { 'href': '/assessments/gridassessments', 'title': 'Assessment', 'icon': 'assignment' }
+    { 'href': '/assessments/gridassessments', 'title': 'Assessments', 'icon': 'assignment' },
 
     // { 'href': '/crud/comments', 'title': 'Comments', 'icon': 'view_list' },
     // { 'href': '/crud/users', 'title': 'Users', 'icon': 'people' },

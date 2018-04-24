@@ -32,8 +32,9 @@ const router = new Router({
       route('/:resource/affecttest', 'Affect', 'affect'),
       route('/:resource/gridaffect', 'GridAffect', 'affected_grid'),
       route('/:resource/formcandidate', 'CandidateForm', 'add_candidate'),
-      route('/:resource/gridcandidate', 'GridCandidate', 'candidates'),
+      route('/:resource/gridcandidates', 'GridCandidate', 'candidates'),
       route('/:resource/formassessment', 'AssessmentForm', 'add_assessment'),
+      route('/:resource/gridassessments', 'GridAssessment', 'add_assessment'),
 
     ])
 
