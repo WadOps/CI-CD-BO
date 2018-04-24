@@ -27,12 +27,14 @@ const router = new Router({
 
     route('/', 'Main', null, [
       route('/', 'Home', 'home'),
-      route('/:resource/grid', 'Grid', 'grid'),
-      route('/:resource/create', 'Form', 'create'),
+      route('/:resource/gridtest', 'Grid', 'grid'),
+      route('/:resource/formtest', 'Form', 'create'),
       route('/:resource/affecttest', 'Affect', 'affect'),
       route('/:resource/gridaffect', 'GridAffect', 'affected_grid'),
-      route('/:resource/crud/:action', 'CandidateForm', 'add_candidate'),
-      route('/:resource/gridcandidates', 'GridCandidate', 'candidates'),
+      route('/:resource/formcandidate', 'CandidateForm', 'add_candidate'),
+      route('/:resource/gridcandidate', 'GridCandidate', 'candidates'),
+      route('/:resource/formassessment', 'AssessmentForm', 'add_assessment'),
+
     ])
 
     // Global redirect for 404

@@ -2,13 +2,15 @@ export default [
     { 'header': 'Admin' },
     // { 'href': '/', 'title': 'Home', 'icon': 'home' },
     // { 'href': '/crud/types', 'title': 'Types', 'icon': 'view_list' },
-    { 'href': '/tests/grid', 'title': 'Tests', 'icon': 'view_list' },
-    { 'href': '/tests/create', 'title': 'Create Test', 'icon': 'note_add' },
-    { 'href': '/affectedtests/gridaffect', 'title': 'Affected Test', 'icon': 'assignment' },
-    { 'href': '/affectedtests/affecttest', 'title': 'Affect Test', 'icon': 'assignment_ind' },
-    { 'href': '/candidates/crud/add', 'title': 'Add Candidate', 'icon': 'person_add' },
-    { 'href': '/candidates/gridcandidates', 'title': 'Candidates', 'icon': 'people' },
-  
+    { 'href': '/tests/gridtest', 'title': 'Tests', 'icon': 'format_list_bulleted' },
+    { 'href': '/tests/formtest', 'title': 'Create Test', 'icon': 'note_add' },
+    { 'href': '/affectedtests/affecttest', 'title': 'Affected Test', 'icon': 'today' },
+    { 'href': '/affectedtests/gridaffect', 'title': 'Affect Test', 'icon': 'insert_invitation' },
+    { 'href': '/candidates/formcandidate', 'title': 'Add Candidate', 'icon': 'person_add' },
+    { 'href': '/candidates/gridcandidate', 'title': 'Candidates', 'icon': 'people' },
+    { 'href': '/assessments/formassessment', 'title': 'Create Assessment', 'icon': 'assignment_ind' },
+    // { 'href': '/assessments/gridassessments', 'title': 'Assessment', 'icon': 'assignment' }
+
     // { 'href': '/crud/comments', 'title': 'Comments', 'icon': 'view_list' },
     // { 'href': '/crud/users', 'title': 'Users', 'icon': 'people' },
   
