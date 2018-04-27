@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '../components/Main.vue'
+import store  from '../store/index'
 
 function route (path, file, name, children) {
   return {
@@ -19,8 +20,8 @@ const router = new Router({
   mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
   routes: [
-    // route('/login', 'Login', 'login'),
-    // route('/error', 'Error', 'error'),
+    route('/login', 'Login', 'login'),
+    route('/error', 'Error', 'error'),
     // route('/passtest/:idtest', 'pass_test'),
 
     // path, file(*.vue), name, children
@@ -35,6 +36,8 @@ const router = new Router({
       route('/:resource/gridcandidates', 'GridCandidate', 'candidates'),
       route('/:resource/formassessment', 'AssessmentForm', 'add_assessment'),
       route('/:resource/gridassessments', 'GridAssessment', 'add_assessment'),
+      route('/:resource/formuser', 'UserForm', 'add_assessment'),
+
 
     ])
 
@@ -43,14 +46,21 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  global.store.dispatch('checkPageTitle', to.path)
-  /* eslint-disable no-undef */
-  if (typeof ga !== 'undefined') {
-    ga('set', 'page', to.path)
-    ga('send', 'pageview')
-  }
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   store.dispatch('checkPageTitle', to.path)
+//   /* eslint-disable no-undef */
+//   if(to.path != '/login') {
+//     if(store.getters.token) { 
+//         console.log('There is a token, resume. (' + to.path + ')');
+//         next();
+//     } else {
+//         console.log('There is no token, redirect to login. (' + to.path + ')');
+//         next('login');
+//     }
+//   } else {
+//       console.log('You\'re on the login page');
+//       next(); // This is where it should have been
+//   }
+// })
 
 export default router

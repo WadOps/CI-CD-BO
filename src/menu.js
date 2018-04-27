@@ -1,5 +1,5 @@
 export default [
-    { 'header': 'Admin' },
+    { 'header': 'Technical Screening' },
     // { 'href': '/', 'title': 'Home', 'icon': 'home' },
     // { 'href': '/crud/types', 'title': 'Types', 'icon': 'view_list' },
     { 'href': '/tests/gridtest', 'title': 'Tests', 'icon': 'format_list_bulleted' },
@@ -14,16 +14,17 @@ export default [
     // { 'href': '/crud/comments', 'title': 'Comments', 'icon': 'view_list' },
     // { 'href': '/crud/users', 'title': 'Users', 'icon': 'people' },
   
-    // {
-    //   'title': 'Pages',
-    //   'icon': 'domain',
-    //   'items': [
-    //     { 'href': '/example', 'title': 'Example' },
-    //     { 'href': '/about', 'title': 'About' }
-    //   ]
-    // },
-    // { divider: true },
-    // { 'header': 'System' },
+    { divider: true, 'role': 'Admin'},
+    { 'header': 'Adminstration', 'role': 'Admin' },
+    {
+        'title': 'Organisation Users',
+        'icon': 'domain',
+        'items': [
+          { 'href': '/users/formuser', 'title': 'Add a new Organisation user' },
+          { 'href': '/about', 'title': 'Organisation users' }
+        ],
+        // 'role': 'Admin'
+    },
     // { 'href': '/settings', 'title': 'Settings', 'icon': 'settings' },
   
     { 'href': '/login', 'icon': 'lock', 'title': 'Logout' }

@@ -2,18 +2,15 @@
   <v-app :dark="dark" standalone="standalone">
     <v-navigation-drawer v-model="drawer" :mini-variant.sync="mini" persistent="persistent" enable-resize-watcher="enable-resize-watcher" :dark="dark" app>
       <v-list dense="dense">
-        <template v-for="item in menu">
+        <template v-for="item in menu" v-if="checkAdmin(item.role)">
           <v-list-group v-if="item.items" v-bind:group="item.group">
-            <v-list-tile :to="item.href" slot="item" :title="item.title">
+            <v-list-tile slot="activator" :title="item.title" :key="item.title" :prepend-icon="item.icon" no-action>
               <v-list-tile-action>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile-content>
-              <v-list-tile-action>
-                <v-icon>keyboard_arrow_down</v-icon>
-              </v-list-tile-action>
             </v-list-tile>
             <v-list-tile v-for="subItem in item.items" :key="subItem.href" :to="subItem.href" v-bind:router="!subItem.target" ripple="ripple" v-bind:disabled="subItem.disabled" v-bind:target="subItem.target">
               <v-list-tile-action v-if="subItem.icon">
@@ -78,11 +75,22 @@ export default {
     }
   },
   computed: {
-    ...mapState(['message', 'menu', 'pageTitle'])
+    ...mapState(['message', 'menu', 'pageTitle','user'])
   },
   methods: {
     changetheme() {
       this.dark=!this.dark
+    },
+    checkAdmin(role) {
+      if(role) {
+        console.log(this.user)
+        if(this.user.role == "Admin")
+          return true
+        else
+          return false
+      } else {
+        return true
+      }
     }
   }
 }

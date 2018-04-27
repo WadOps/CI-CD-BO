@@ -16,6 +16,7 @@
     "i": "^0.3.6",
     "marked": "^0.3.19",
     "moment": "^2.22.0",
+    "password-generator": "^2.2.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuetify": "^1.0.10",

@@ -17,13 +17,17 @@ const store = new Vuex.Store({
     config: config
 
   },
+  getters: {
+    token: state => state.token
+  },
   mutations: {
 
-    setAuth (state, { user, token }) {
-      state.user = user
+    setAuth (state, { token, user }) {
+      console.log(token)
       state.token = token
-      global.helper.ls.set('user', user)
-      global.helper.ls.set('token', token)
+      console.log(state.token)
+      if(user)
+        state.user = user
     },
     setMenu (state, data) {
       state.menu = data

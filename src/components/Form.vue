@@ -94,7 +94,7 @@
 </template>
 
 <script>
-import Api from "@/services/api";
+import Api from "@/services/api"
 var marked = require('marked')
 export default {
 

@@ -1,53 +1,81 @@
 <template>
-    <div>
-    <v-dialog :value="true" persistent="">
-        <v-card hover="" style="background:white">
-        <v-card-row class="deep-purple darken-1">
-            <v-card-title class="white--text">
-            <div class="text-xs-center"> {{$t("Login")}}</div>
-            </v-card-title>
-        </v-card-row>
-        <v-card-row>
-            <v-card-text class="pt-4">
-            <v-form v-model="model" action="login" :fields="fields" @success="onSuccess" submitButtonText="Login">
-                <div class="flex pb-2"><small>{{$t("* Indicates required field")}}</small></div>
-            </v-form>
-            </v-card-text>
-        </v-card-row>
-        </v-card>
-    </v-dialog>
-    </div>
+  <v-app fluid>
+    <v-layout row wrap>
+      <v-flex xs12 md6 offset-md3>
+			<v-card>
+				<v-toolbar color="error" dark>
+					<v-toolbar-title>Login</v-toolbar-title>
+				</v-toolbar>
+				<v-card-text>
+					<v-text-field
+					label="Username"
+					required
+					v-model="model.username"
+					></v-text-field>
+					<v-text-field
+					label="Password"
+					required
+					v-model="model.password"
+					></v-text-field>
+					<v-card-actions>
+						<v-spacer></v-spacer>
+						<v-btn primary="primary" dark="dark" type="submit" color="error" @click="onSubmit(model)">Log in
+							<v-icon right="right" dark="dark">send</v-icon>
+						</v-btn>
+					</v-card-actions>
+				</v-card-text>
+			</v-card>
+		</v-flex>
+		<v-snackbar
+            :timeout=6000
+            :top=true
+            v-model="showerror"
+            >
+            {{ error }}
+            <v-btn flat color="error" @click.native="showerror = false">Close</v-btn>
+        </v-snackbar>
+    </v-layout>
+  </v-app>
 </template>
 
-<style>
-  body{
-    background: #666 !important;
-  }
-</style>
-
 <script>
-
+import { mapState } from 'vuex'
+import Api from "@/services/api"
 export default {
 
-  data () {
-    return {
-      model: {
-        username: 'admin',
-        password: '123456'
-      },
 
-      fields: {
-        username: { label: 'Username' },
-        password: { label: 'Password', type: 'password' }
-      },
-      show: true
-    }
-  },
-  methods: {
-    onSuccess (data) {
-      this.$store.commit('setAuth', data)
-      this.$router.replace('/')
-    }
+	data () {
+		return {
+			model: {
+				username: '',
+				password: ''
+			},
+			error: '',
+        	showerror: false,
+		}
+	},
+	methods: {
+		onSubmit (data) {
+			Api.customApiParam("post", "/authenticate", data)
+			.then(response => {
+				if(response.data.success == true) {
+					this.onSuccess(response.data)
+				} else {
+					this.showError(response.data.data)
+				}
+			})
+			.catch(err => {
+				console.log(err);
+			});
+		},
+		onSuccess (data) {
+			this.$store.commit('setAuth', data.data)
+			this.$router.replace('/')
+		},
+		showError(err) {
+        this.error=err
+        this.showerror = true
+    },
   },
 
   mounted () {
