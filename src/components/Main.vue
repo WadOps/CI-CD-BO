@@ -83,7 +83,6 @@ export default {
     },
     checkAdmin(role) {
       if(role) {
-        console.log(this.user)
         if(this.user.role == "Admin")
           return true
         else

@@ -8,7 +8,7 @@
 				</v-toolbar>
 				<v-card-text>
 					<v-text-field
-					label="Username"
+					label="Email"
 					required
 					v-model="model.username"
 					></v-text-field>

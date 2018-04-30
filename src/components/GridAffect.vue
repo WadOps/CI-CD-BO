@@ -58,6 +58,14 @@
           Your search for "{{ search }}" found no results.
         </v-alert>
       </v-data-table>
+      <v-snackbar
+            :timeout=6000
+            :top=true
+            v-model="showerror"
+            >
+            {{ error }}
+            <v-btn flat color="error" @click.native="showerror = false">Close</v-btn>
+      </v-snackbar>
     </v-card>
 
 </template>
@@ -84,12 +92,18 @@ export default {
         { text: 'Challenge finished at', value: 'updatedAt', sortable: false,}
       ],
       items: [],
-      qstsAnswers: []
+      qstsAnswers: [],
+      error: '',
+      showerror: false,
     }
   },
   mounted() {
     Api.customApi("get", "/passedtests").then(response => {
-      this.items = response.data.data;
+      if(response.data.success==true) {
+        this.items = response.data.data;
+      } else {
+        this.showError(response.data.data)
+      }
     });
   },
 
@@ -103,6 +117,10 @@ export default {
     showanswers(asws) {
       this.qstsAnswers = asws
       this.dialog = true
+    },
+    showError(err) {
+      this.error=err
+      this.showerror = true
     }
   }
     

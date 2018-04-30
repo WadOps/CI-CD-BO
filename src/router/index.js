@@ -35,8 +35,9 @@ const router = new Router({
       route('/:resource/formcandidate', 'CandidateForm', 'add_candidate'),
       route('/:resource/gridcandidates', 'GridCandidate', 'candidates'),
       route('/:resource/formassessment', 'AssessmentForm', 'add_assessment'),
-      route('/:resource/gridassessments', 'GridAssessment', 'add_assessment'),
-      route('/:resource/formuser', 'UserForm', 'add_assessment'),
+      route('/:resource/gridassessments', 'GridAssessment', 'assessments'),
+      route('/:resource/formuser', 'UserForm', 'add_user'),
+      route('/:resource/gridusers', 'GridUser', 'users'),
 
 
     ])

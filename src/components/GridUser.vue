@@ -1,7 +1,7 @@
 <template>
     <v-card>
       <v-card-title>
-        Candidates
+        Organization Users
         <v-spacer></v-spacer>
         <v-text-field
           append-icon="search"
@@ -27,7 +27,7 @@
                 </v-btn>
                 <v-dialog v-model="formdialog">
                   <v-card>
-                    <formcandidate :id="chosenCandidate.id" :email="chosenCandidate.email" :name="chosenCandidate.name" @disabledialog="updatedItem()"></formcandidate>
+                    <formuser :id="chosenUser.id" :name="chosenUser.name" :email="chosenUser.email" @disabledialog="updatedItem()"></formuser>
                   </v-card>
                 </v-dialog>
                 <v-btn icon class="mx-0" @click="showdialog(props.item)">
@@ -37,9 +37,6 @@
                     <v-card>
                         <v-card-text class="title">
                             Are you sure?
-                            <v-card-text class="subheading">
-                                <v-icon>warning</v-icon> it will delete all candidate Passed Tests !
-                            </v-card-text>
                         </v-card-text>
                         <v-card-actions>
                             <v-btn color="primary" flat @click.stop="deleteItem()">Sure !</v-btn>
@@ -60,7 +57,7 @@
             >
             {{ error }}
             <v-btn flat color="error" @click.native="showerror = false">Close</v-btn>
-      </v-snackbar>
+        </v-snackbar>
     </v-card>
 
 </template>
@@ -68,72 +65,72 @@
 <script>
 import Api from "@/services/api";
 import moment from "moment"
-import formcandidate from "./CandidateForm";
+import formuser from "./UserForm";
 export default {
   components: {
-    formcandidate
+    formuser
   },
   data () {
     return {
-      search: '',
-      headers: [
-        {
-          text: 'id',
-          align: 'left',
-          sortable: false,
-          value: 'id'
-        },
-        { text: 'Name', value: 'name', sortable: false, },
-        { text: 'Email', value: 'email', sortable: false, },
-        { text: 'Added', value: 'createdAt', sortable: false, } 
-      ],
-      items: [],
-      dialog: false,
-      formdialog: false,
-      chosenCandidate: {},
-      error: '',
-      showerror: false,
+        search: '',
+        headers: [
+            {
+            text: 'id',
+            align: 'left',
+            sortable: false,
+            value: 'id'
+            },
+            { text: 'Userame', value: 'name', sortable: false, },
+            { text: 'Email', value: 'email', sortable: false, },
+            { text: 'Added', value: 'createdAt', sortable: false, } 
+        ],
+        items: [],
+        dialog: false,
+        formdialog: false,
+        chosenUser: {},
+        error: '',
+        showerror: false,
     }
   },
   mounted() {
-      Api.customApi("get", "/candidates").then(response => {
-        if(response.data.success==true) {
-          this.items = response.data.data;
-        } else {
-          this.showError(response.data.data)
-        }
-      })
+        Api.customApi("get", "/users").then(response => {
+            if(response.data.success==true) {
+                this.items = response.data.data;
+            } else {
+                this.showError(response.data.data)
+            }
+        })
   },
   methods: {
     momentit(time) {
       return moment(time).format('llll')
     },
-    showdialog(candidate) {
-      this.chosenCandidate = candidate
+    showdialog(user) {
+      this.chosenUser = user
       this.dialog = true
     },
-    showformdialog(candidate) {
-      this.chosenCandidate = candidate
+    showformdialog(user) {
+      this.chosenUser = user
       this.formdialog = true
     },
     deleteItem() {
-        Api.customApi("delete", "/candidates/crud/"+this.chosenCandidate.id).then((response) => {
+        Api.customApi("delete", "/users/crud/"+this.chosenUser.id).then((response) => {
             if(response.data.success==true)
-                Api.customApi("get", "/candidates").then(response => {
+                Api.customApi("get", "/users").then(response => {
                     this.items = response.data.data;
                 })
         })
         this.dialog = false
     },
     updatedItem() {
-      	Api.customApi("get", "/candidates").then(response => {
+      	Api.customApi("get", "/users").then(response => {
             this.items = response.data.data;
 		})
 		this.formdialog = false
     },
     showError(err) {
-      this.error=err
-      this.showerror = true
+        this.error=err
+        this.showerror = true
     }
   }
 }

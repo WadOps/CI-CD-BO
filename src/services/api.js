@@ -14,7 +14,6 @@ export default {
     },
 
     customApiParam(method, url, obj) {
-        console.log(store.getters.token,obj.username, obj.password)
         return axios.create({
             baseURL: `http://localhost:1337`,
             headers: {

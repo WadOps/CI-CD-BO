@@ -136,6 +136,14 @@
           Your search for "{{ search }}" found no results.
         </v-alert>
       </v-data-table>
+      <v-snackbar
+            :timeout=6000
+            :top=true
+            v-model="showerror"
+            >
+            {{ error }}
+            <v-btn flat color="error" @click.native="showerror = false">Close</v-btn>
+      </v-snackbar>
     </v-card>
 
 </template>
@@ -184,12 +192,18 @@ export default {
         ],
         techstack: [],
         updatedtime: false,
-        dialog: false
+        dialog: false,
+        error: '',
+        showerror: false,
     }
   },
   mounted() {
         Api.customApi("get", "/assessments").then(response => {
-            this.items = response.data.data;
+            if(response.data.success==true) {
+                this.items = response.data.data;
+            } else {
+                this.showError(response.data.data)
+            }
         })
   },
   methods: {
@@ -230,6 +244,10 @@ export default {
     },
     momentit(time) {
       return moment(time).format('llll')
+    },
+    showError(err) {
+      this.error=err
+      this.showerror = true
     }
   }
 }

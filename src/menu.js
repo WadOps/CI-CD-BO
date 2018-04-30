@@ -21,7 +21,7 @@ export default [
         'icon': 'domain',
         'items': [
           { 'href': '/users/formuser', 'title': 'Add a new Organisation user' },
-          { 'href': '/about', 'title': 'Organisation users' }
+          { 'href': '/users/gridusers', 'title': 'Organisation users' }
         ],
         // 'role': 'Admin'
     },
