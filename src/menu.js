@@ -23,7 +23,7 @@ export default [
           { 'href': '/users/formuser', 'title': 'Add a new Organisation user' },
           { 'href': '/users/gridusers', 'title': 'Organisation users' }
         ],
-        // 'role': 'Admin'
+        'role': 'Admin'
     },
     // { 'href': '/settings', 'title': 'Settings', 'icon': 'settings' },
   

@@ -210,7 +210,7 @@ export default {
     deleteItem(assessment) {
         Api.customApi("delete", "/assessments/crud/"+assessment.id).then((response) => {
             if(response.data.success==true)
-                Api.customApi("get", "/assessmentgis").then(response => {
+                Api.customApi("get", "/assessments").then(response => {
                     this.items = response.data.data;
                 })
         })

@@ -282,7 +282,7 @@ export default {
         });
     },
     onSuccess (data) {
-        this.$router.push({name: '', params: {resource: this.resource}})
+        this.$router.push({name: 'assessments', params: {resource: this.resource}})
         if (data.id) {
             // this.$router.go(-1)
       }

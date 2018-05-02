@@ -47,21 +47,21 @@ const router = new Router({
   ]
 })
 
-// router.beforeEach((to, from, next) => {
-//   store.dispatch('checkPageTitle', to.path)
-//   /* eslint-disable no-undef */
-//   if(to.path != '/login') {
-//     if(store.getters.token) { 
-//         console.log('There is a token, resume. (' + to.path + ')');
-//         next();
-//     } else {
-//         console.log('There is no token, redirect to login. (' + to.path + ')');
-//         next('login');
-//     }
-//   } else {
-//       console.log('You\'re on the login page');
-//       next(); // This is where it should have been
-//   }
-// })
+router.beforeEach((to, from, next) => {
+  store.dispatch('checkPageTitle', to.path)
+  /* eslint-disable no-undef */
+  if(to.path != '/login') {
+    if(store.getters.token) { 
+        console.log('There is a token, resume. (' + to.path + ')');
+        next();
+    } else {
+        console.log('There is no token, redirect to login. (' + to.path + ')');
+        next('login');
+    }
+  } else {
+      console.log('You\'re on the login page');
+      next(); // This is where it should have been
+  }
+})
 
 export default router
