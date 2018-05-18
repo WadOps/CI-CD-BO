@@ -10,6 +10,6 @@ RUN su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc
 
 RUN rm -rf /var/lib/apt/lists/* &&\
     apt-get --yes update &&\
-    apt install -t --yes jessie-backports  openjdk-8-jre-headless ca-certificates-java
+    apt install --yes -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
 
 RUN cp /postcss.config.js /node_modules/vuetify/dist/
