@@ -13,3 +13,6 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+test/e2e/reports/CHROME_*
+debug.log
+selenium-debug.log

@@ -13,6 +13,7 @@
 					v-model="model.username"
 					></v-text-field>
 					<v-text-field
+					type="password"
 					label="Password"
 					required
 					v-model="model.password"

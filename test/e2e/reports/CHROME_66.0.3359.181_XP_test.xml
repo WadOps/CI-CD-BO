@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
             failures="0"
-            tests="1">
+            tests="2">
 
   <testsuite name="test"
     errors="0" failures="0" hostname="" id="" package="test" skipped="0"
-    tests="1" time="28.53" timestamp="Fri, 18 May 2018 10:35:22 GMT">
+    tests="2" time="41.43" timestamp="Fri, 18 May 2018 14:57:24 GMT">
   
-    <testcase name="default e2e tests" time="28.53" assertions="3">
+    <testcase name="login tests" time="29.07" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="after auth tests" time="12.37" assertions="6">
+
+    
+
+    
+
+    
 
     
 

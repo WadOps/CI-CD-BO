@@ -31,7 +31,7 @@
                         </v-layout>
                     </v-flex>
                     <v-spacer></v-spacer>
-                    <v-btn fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
+                    <v-btn id="addqst" fab dark color="error" @click="addQuestion(questions)"> <v-icon dark>add</v-icon> </v-btn>
                 </v-layout>
             </v-flex>
         </v-layout>
