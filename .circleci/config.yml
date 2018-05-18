@@ -24,29 +24,34 @@ jobs:
       - checkout
 
       # Download and cache dependencies
-      # - restore_cache:
-      #     keys:
-      #     - v1-dependencies-{{ checksum "package.json" }}
-      #     # fallback to using the latest cache if no exact match is found
-      #     - v1-dependencies-
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
 
-      # - run: yarn install
+      - run: yarn install
 
-      # - save_cache:
-      #     paths:
-      #       - node_modules
-      #     key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
-      - run: npm -v
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
-      - setup_remote_docker:   
-          docker_layer_caching: true 
-
-      # build and push Docker image
       - run: |
-          TAG=0.1.$CIRCLE_BUILD_NUM
-          docker build -t wadman/circleci-demo-bo:$TAG .      
-          docker login -u $DOCKER_USER -p $DOCKER_PASS         
-          docker push wadman/circleci-demo-bo:$TAG
+          sudo rm -rf /var/lib/apt/lists/*
+          sudo apt-get update
+          sudo apt install -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+
+      # run tests!
+      - run: npm run e2e
+
+      # - setup_remote_docker:   
+      #     docker_layer_caching: true 
+
+      # # build and push Docker image
+      # - run: |
+      #     TAG=0.1.$CIRCLE_BUILD_NUM
+      #     docker build -t wadman/circleci-demo-bo:$TAG .      
+      #     docker login -u $DOCKER_USER -p $DOCKER_PASS         
+      #     docker push wadman/circleci-demo-bo:$TAG
 

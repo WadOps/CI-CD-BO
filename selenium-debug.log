@@ -1,0 +1,43 @@
+10:35:21.790 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+10:35:21.790 INFO - Launching a standalone Selenium Server
+2018-05-18 10:35:21.808:INFO::main: Logging initialized @274ms
+10:35:21.863 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:35:21.864 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+10:35:21.864 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:35:21.864 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+10:35:21.871 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+2018-05-18 10:35:21.916:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2018-05-18 10:35:21.958:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@6cc4c815{/,null,AVAILABLE}
+2018-05-18 10:35:22.248:INFO:osjs.ServerConnector:main: Started ServerConnector@397fa068{HTTP/1.1}{0.0.0.0:4444}
+2018-05-18 10:35:22.249:INFO:osjs.Server:main: Started @715ms
+10:35:22.249 INFO - Selenium Server is up and running
+10:35:22.537 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+10:35:22.576 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]])
+10:35:22.584 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]
+Starting ChromeDriver 2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9) on port 1566
+Only local connections are allowed.
+10:35:23.649 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+10:35:25.344 INFO - Detected dialect: OSS
+10:35:25.359 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, platform=ANY}]]
+10:35:25.373 INFO - Executing: [get: http://localhost:8082])
+10:35:48.276 INFO - Done: [get: http://localhost:8082]
+10:35:48.286 INFO - Executing: [find elements: By.cssSelector: #app])
+10:35:48.333 INFO - Done: [find elements: By.cssSelector: #app]
+10:35:48.340 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: #app]])
+10:35:48.363 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: #app]]
+10:35:48.372 INFO - Executing: [find elements: By.cssSelector: .card])
+10:35:48.405 INFO - Done: [find elements: By.cssSelector: .card]
+10:35:49.415 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
+10:35:49.443 INFO - Done: [find element: By.cssSelector: button[type=submit]]
+10:35:49.449 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: button[type=submit]]])
+10:35:49.525 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: button[type=submit]]]
+10:35:49.535 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:35:49.568 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:35:50.076 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:35:50.089 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:35:50.093 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: .snack__wrapper]])
+10:35:50.115 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (6fd1408de487d9549d85a671091c42b3)] -> css selector: .snack__wrapper]]
+10:35:50.123 INFO - Executing: [delete session: 5a1259cc-9015-4ecc-9816-4c91530a9f4d])
+10:35:50.916 INFO - Done: [delete session: 5a1259cc-9015-4ecc-9816-4c91530a9f4d]
