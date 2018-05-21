@@ -32,6 +32,7 @@ module.exports = {
         browserName: 'chrome',
         javascriptEnabled: true,
         acceptSslCerts: true,
+        args : ['headless', 'no-sandbox', 'disable-gpu']
       }
     },
 
