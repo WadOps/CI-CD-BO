@@ -10,7 +10,7 @@ module.exports = {
 
     browser
       .url(devServer)
-      .waitForElementVisible('#app', 5000)
+      .waitForElementVisible('#app', 10000)
       .assert.elementPresent('.card')
       .pause(1000)
       .click('button[type=submit]')
