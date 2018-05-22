@@ -5,7 +5,7 @@ export default {
 
     customApi(method, url) {
         return axios.create({
-            baseURL: `sails_app`,
+            baseURL: `http://sails_app`,
             // baseURL: `http://localhost:1337`,
             headers: {
                 'Content-Type': 'application/json',
@@ -16,7 +16,7 @@ export default {
 
     customApiParam(method, url, obj) {
         return axios.create({
-            baseURL: `sails_app`,
+            baseURL: `http://sails_app`,
             // baseURL: `http://localhost:1337`,
             headers: {
                 'Content-Type': 'application/json',
