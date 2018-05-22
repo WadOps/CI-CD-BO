@@ -35,6 +35,7 @@ module.exports = {
       .click('button[type=submit]')
       .waitForElementVisible('.application--wrap', 10000)
       // .useXpath()
+      .pause(1000)
       .click('a[title="Tests"]')
       .waitForElementVisible('.datatable', 10000)
       // .useCss()
