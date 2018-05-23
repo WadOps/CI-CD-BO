@@ -1,0 +1,42 @@
+version: "2"
+services:
+  sails_app:
+    image: wadman/circleci-demo:latest
+    expose:
+      - "1337"
+    command: sails lift
+    depends_on:
+      - sails_mongo
+    networks:
+      - backend
+      - frontend
+
+  sails_mongo:
+    image: mongo
+    command: mongod
+    volumes:
+      - mongodata:/data/db
+    expose:
+      - "27017"
+    networks:
+      - backend
+
+  backoffice:
+    image: wadman/circleci-demo-bo
+    build:
+      context: .
+      dockerfile: dockerfile
+    command: npm run e2e
+    depends_on:
+      - sails_app
+    networks:
+      - frontend
+
+volumes: 
+  mongodata:
+
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
