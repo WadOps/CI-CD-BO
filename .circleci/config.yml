@@ -53,8 +53,11 @@ jobs:
       - run:
           name: Start Container
           command: |
-            docker-compose up
-            # docker-compose ps
+            docker-compose up -d
+            docker-compose ps
+      
+      - run:
+          docker exec -it project_backoffice_1 npm run e2e
 
       # # build and push Docker image
       # - run: |
