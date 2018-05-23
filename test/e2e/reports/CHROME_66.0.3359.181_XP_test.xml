@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="2">
 
   <testsuite name="test"
-    errors="0" failures="1" hostname="" id="" package="test" skipped="1"
-    tests="2" time="38.56" timestamp="Tue, 22 May 2018 11:16:46 GMT">
+    errors="0" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="2" time="43.55" timestamp="Tue, 22 May 2018 11:58:59 GMT">
   
-    <testcase name="login tests" time="38.56" assertions="3">
+    <testcase name="login tests" time="29.82" assertions="3">
 
     
 
-      <failure message="Timed out while waiting for element &lt;.snack__wrapper&gt; to be present for 10000 milliseconds.">    at Object.loginTests [as login tests] (D:/Users/Wadie/Projects/quiz-app-backoffice/test/e2e/specs/test.js:17:8)
-    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+    
 
     
     </testcase>
   
-  
+    <testcase name="after auth tests" time="13.74" assertions="6">
+
     
-    <testcase
-      name="after auth tests">
-      <skipped />
+
+    
+
+    
+
+    
+
+    
+
+    
     </testcase>
-    
+  
   
   </testsuite>
 </testsuites>

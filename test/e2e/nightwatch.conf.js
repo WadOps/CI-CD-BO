@@ -22,12 +22,6 @@ module.exports = {
       selenium_port: 4444,
       selenium_host: 'localhost',
       silent: true,
-      screenshots : {
-        "enabled" : true,
-        "on_failure" : true,
-        "on_error" : true,
-        "path" : "screens"
-      },
       globals: {
         devServerURL: 'http://localhost:' + (process.env.PORT || config.dev.port)
       }

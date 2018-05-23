@@ -45,6 +45,7 @@ module.exports = {
       .pause(1000)
       .click('.input-group__icon-cb')
       .waitForElementVisible('.dialog--active', 10000)
+      .pause(1000)
       .click('.btn--flat')
       .pause(1000)
       .click('#addqst')

@@ -5,8 +5,8 @@ export default {
 
     customApi(method, url) {
         return axios.create({
-            baseURL: `http://sails_app`,
-            // baseURL: `http://localhost:1337`,
+            baseURL: `http://localhost:1337`,
+            // baseURL: `http://sails_app:1337`, // for docker env
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + store.getters.token ? store.getters.token : ''
@@ -16,8 +16,8 @@ export default {
 
     customApiParam(method, url, obj) {
         return axios.create({
-            baseURL: `http://sails_app`,
-            // baseURL: `http://localhost:1337`,
+            baseURL: `http://localhost:1337`,
+            // baseURL: `http://sails_app:1337`, // for docker env
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + store.getters.token ? store.getters.token : ''
