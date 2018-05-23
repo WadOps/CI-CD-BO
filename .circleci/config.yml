@@ -53,12 +53,12 @@ jobs:
       - run:
           name: Start Container
           command: |
-            docker-compose up -d
-            docker-compose ps
+            docker-compose up
+            # docker-compose ps
 
-      # build and push Docker image
-      - run: |
-          TAG=latest   
-          docker login -u $DOCKER_USER -p $DOCKER_PASS         
-          docker push wadman/circleci-demo-bo:$TAG
+      # # build and push Docker image
+      # - run: |
+      #     TAG=latest   
+      #     docker login -u $DOCKER_USER -p $DOCKER_PASS         
+      #     docker push wadman/circleci-demo-bo:$TAG
 
