@@ -7,7 +7,7 @@ jobs:
   build:
     branches:
       only:
-        - ci-compose
+        - develop
     
     docker:
       # specify the version you desire here
@@ -57,7 +57,7 @@ jobs:
             docker-compose ps
       
       - run:
-          docker exec -it project_backoffice_1 npm run e2e
+          docker exec -it project_app-backoffice_1 npm run e2e
 
       # build and push Docker image
       - run: |
