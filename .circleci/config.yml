@@ -59,9 +59,9 @@ jobs:
       - run:
           docker exec -it project_backoffice_1 npm run e2e
 
-      # # build and push Docker image
-      # - run: |
-      #     TAG=latest   
-      #     docker login -u $DOCKER_USER -p $DOCKER_PASS         
-      #     docker push wadman/circleci-demo-bo:$TAG
+      # build and push Docker image
+      - run: |
+          TAG=latest   
+          docker login -u $DOCKER_USER -p $DOCKER_PASS         
+          docker push wadman/circleci-demo-bo:$TAG
 
