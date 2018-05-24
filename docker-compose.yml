@@ -1,17 +1,17 @@
 version: "2"
 services:
-  sails_app:
+  app-sails:
     image: wadman/circleci-demo:latest
     expose:
       - "1337"
     command: sails lift
     depends_on:
-      - sails_mongo
+      - db-mongo
     networks:
       - backend
       - frontend
 
-  sails_mongo:
+  db-mongo:
     image: mongo
     command: mongod
     volumes:
@@ -21,14 +21,14 @@ services:
     networks:
       - backend
 
-  backoffice:
+  app-backoffice:
     image: wadman/circleci-demo-bo
     build:
       context: .
       dockerfile: dockerfile
     command: tail -f /dev/null
     depends_on:
-      - sails_app
+      - app-sails
     networks:
       - frontend
 
