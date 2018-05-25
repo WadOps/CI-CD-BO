@@ -25,7 +25,7 @@ services:
     image: wadman/circleci-demo-bo
     build:
       context: .
-      dockerfile: dockerfile
+      dockerfile: dockerfile-TEST
     command: tail -f /dev/null
     depends_on:
       - app-sails
