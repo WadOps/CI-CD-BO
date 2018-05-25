@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN cp /postcss.config.js /node_modules/vuetify/dist/
+RUN cp /usr/src/app/postcss.config.js /usr/src/app/node_modules/vuetify/dist/
 
 ENV NODE_ENV=production
 
