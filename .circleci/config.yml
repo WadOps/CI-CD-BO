@@ -62,7 +62,7 @@ jobs:
       # build and push Docker image
       - run: |
           TAG=latest
-          docker build wadman/circleci-demo-bo:$TAG
+          docker build -t wadman/circleci-demo-bo:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS         
           docker push wadman/circleci-demo-bo:$TAG
 
