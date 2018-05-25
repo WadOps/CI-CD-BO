@@ -5,9 +5,9 @@
 
   <testsuite name="test"
     errors="0" failures="0" hostname="" id="" package="test" skipped="0"
-    tests="2" time="43.55" timestamp="Tue, 22 May 2018 11:58:59 GMT">
+    tests="2" time="48.17" timestamp="Fri, 25 May 2018 10:53:43 GMT">
   
-    <testcase name="login tests" time="29.82" assertions="3">
+    <testcase name="login tests" time="32.94" assertions="3">
 
     
 
@@ -16,7 +16,7 @@
     
     </testcase>
   
-    <testcase name="after auth tests" time="13.74" assertions="6">
+    <testcase name="after auth tests" time="15.23" assertions="6">
 
     
 

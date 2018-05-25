@@ -1,116 +1,173 @@
-11:58:59.175 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
-11:58:59.176 INFO - Launching a standalone Selenium Server
-2018-05-22 11:58:59.194:INFO::main: Logging initialized @278ms
-11:58:59.255 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-11:58:59.255 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+10:53:43.130 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+10:53:43.130 INFO - Launching a standalone Selenium Server
+2018-05-25 10:53:43.150:INFO::main: Logging initialized @281ms
+10:53:43.215 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:53:43.215 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-11:58:59.256 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-11:58:59.256 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-11:58:59.261 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+10:53:43.215 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:53:43.215 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+10:53:43.221 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-2018-05-22 11:58:59.298:INFO:osjs.Server:main: jetty-9.2.15.v20160210
-2018-05-22 11:58:59.335:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@6cc4c815{/,null,AVAILABLE}
-2018-05-22 11:58:59.644:INFO:osjs.ServerConnector:main: Started ServerConnector@3ffc5af1{HTTP/1.1}{0.0.0.0:4444}
-2018-05-22 11:58:59.645:INFO:osjs.Server:main: Started @728ms
-11:58:59.645 INFO - Selenium Server is up and running
-11:58:59.942 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-11:58:59.974 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]])
-11:58:59.985 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]
-Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 28579
+2018-05-25 10:53:43.260:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2018-05-25 10:53:43.295:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@6cc4c815{/,null,AVAILABLE}
+2018-05-25 10:53:43.581:INFO:osjs.ServerConnector:main: Started ServerConnector@3ffc5af1{HTTP/1.1}{0.0.0.0:4444}
+2018-05-25 10:53:43.582:INFO:osjs.Server:main: Started @713ms
+10:53:43.582 INFO - Selenium Server is up and running
+10:53:43.916 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+10:53:43.951 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]])
+10:53:43.958 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 16977
 Only local connections are allowed.
-11:59:01.082 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-11:59:02.567 INFO - Detected dialect: OSS
-11:59:02.582 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]]
-11:59:02.598 INFO - Executing: [get: http://localhost:8081])
-11:59:26.889 INFO - Done: [get: http://localhost:8081]
-11:59:26.902 INFO - Executing: [find elements: By.cssSelector: #app])
-11:59:26.939 INFO - Done: [find elements: By.cssSelector: #app]
-11:59:26.946 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: #app]])
-11:59:26.974 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: #app]]
-11:59:26.986 INFO - Executing: [find elements: By.cssSelector: .card])
-11:59:27.023 INFO - Done: [find elements: By.cssSelector: .card]
-11:59:28.031 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
-11:59:28.056 INFO - Done: [find element: By.cssSelector: button[type=submit]]
-11:59:28.062 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: button[type=submit]]])
-11:59:28.138 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: button[type=submit]]]
-11:59:28.147 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-11:59:28.171 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-11:59:28.677 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-11:59:28.693 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-11:59:28.699 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: .snack__wrapper]])
-11:59:28.721 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (9a1a30dc71265ef1d3424df97675c651)] -> css selector: .snack__wrapper]]
-11:59:28.728 INFO - Executing: [delete session: 2b367a00-6fa7-4adf-b500-1c9b7edc8a5d])
-11:59:29.612 INFO - Done: [delete session: 2b367a00-6fa7-4adf-b500-1c9b7edc8a5d]
-11:59:29.629 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]])
-11:59:29.631 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]
-Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 30233
+10:53:45.035 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+10:53:46.714 INFO - Detected dialect: OSS
+10:53:46.730 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]]
+10:53:46.743 INFO - Executing: [get: http://localhost:8080])
+10:54:12.543 INFO - Done: [get: http://localhost:8080]
+10:54:12.560 INFO - Executing: [find elements: By.cssSelector: #app])
+10:54:12.663 INFO - Done: [find elements: By.cssSelector: #app]
+10:54:12.672 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: #app]])
+10:54:12.738 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: #app]]
+10:54:12.776 INFO - Executing: [find elements: By.cssSelector: .card])
+10:54:12.806 INFO - Done: [find elements: By.cssSelector: .card]
+10:54:13.814 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
+10:54:13.911 INFO - Done: [find element: By.cssSelector: button[type=submit]]
+10:54:13.917 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: button[type=submit]]])
+10:54:14.055 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: button[type=submit]]]
+10:54:14.063 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:54:14.100 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:54:14.606 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:54:14.622 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:54:15.128 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:54:15.139 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:54:15.647 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
+10:54:15.661 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
+10:54:15.666 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: .snack__wrapper]])
+10:54:15.689 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: .snack__wrapper]]
+10:54:15.726 INFO - Executing: [delete session: 6fa5894c-8721-46af-85b8-53169d68953c])
+10:54:16.684 INFO - Done: [delete session: 6fa5894c-8721-46af-85b8-53169d68953c]
+10:54:16.701 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]])
+10:54:16.703 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 29897
 Only local connections are allowed.
-11:59:30.145 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-11:59:31.786 INFO - Detected dialect: OSS
-11:59:31.787 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[no-sandbox, disable-gpu]}, platform=ANY}]]
-11:59:31.794 INFO - Executing: [get: http://localhost:8081])
-11:59:33.059 INFO - Done: [get: http://localhost:8081]
-11:59:33.067 INFO - Executing: [find elements: By.cssSelector: #app])
-11:59:33.093 INFO - Done: [find elements: By.cssSelector: #app]
-11:59:33.098 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: #app]])
-11:59:33.130 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: #app]]
-11:59:33.136 INFO - Executing: [find elements: By.cssSelector: .card])
-11:59:33.162 INFO - Done: [find elements: By.cssSelector: .card]
-11:59:34.169 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-11:59:34.209 INFO - Done: [find element: By.cssSelector: input[type=text]]
-11:59:34.218 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]])
-11:59:34.404 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]]
-11:59:34.409 INFO - Executing: [find element: By.cssSelector: input[type=password]])
-11:59:34.433 INFO - Done: [find element: By.cssSelector: input[type=password]]
-11:59:34.439 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]])
-11:59:34.850 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]]
-11:59:34.856 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
-11:59:34.879 INFO - Done: [find element: By.cssSelector: button[type=submit]]
-11:59:34.883 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: button[type=submit]]])
-11:59:34.958 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: button[type=submit]]]
-11:59:34.965 INFO - Executing: [find elements: By.cssSelector: .application--wrap])
-11:59:34.990 INFO - Done: [find elements: By.cssSelector: .application--wrap]
-11:59:34.995 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .application--wrap]])
-11:59:35.028 INFO - Done: [is displayed: 6 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .application--wrap]]
-11:59:36.035 INFO - Executing: [find element: By.cssSelector: a[title="Tests"]])
-11:59:36.067 INFO - Done: [find element: By.cssSelector: a[title="Tests"]]
-11:59:36.072 INFO - Executing: [click: 7 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: a[title="Tests"]]])
-11:59:36.160 INFO - Done: [click: 7 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: a[title="Tests"]]]
-11:59:36.168 INFO - Executing: [find elements: By.cssSelector: .datatable])
-11:59:36.195 INFO - Done: [find elements: By.cssSelector: .datatable]
-11:59:36.701 INFO - Executing: [find elements: By.cssSelector: .datatable])
-11:59:36.718 INFO - Done: [find elements: By.cssSelector: .datatable]
-11:59:36.726 INFO - Executing: [is displayed: 8 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .datatable]])
-11:59:36.762 INFO - Done: [is displayed: 8 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .datatable]]
-11:59:36.767 INFO - Executing: [find element: By.cssSelector: .toolbar__side-icon])
-11:59:36.798 INFO - Done: [find element: By.cssSelector: .toolbar__side-icon]
-11:59:36.805 INFO - Executing: [click: 10 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .toolbar__side-icon]])
-11:59:36.914 INFO - Done: [click: 10 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .toolbar__side-icon]]
-11:59:37.919 INFO - Executing: [find element: By.cssSelector: a[title="Create Test"]])
-11:59:37.945 INFO - Done: [find element: By.cssSelector: a[title="Create Test"]]
-11:59:37.950 INFO - Executing: [click: 11 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: a[title="Create Test"]]])
-11:59:38.045 INFO - Done: [click: 11 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: a[title="Create Test"]]]
-11:59:39.050 INFO - Executing: [find element: By.cssSelector: .input-group__icon-cb])
-11:59:39.074 INFO - Done: [find element: By.cssSelector: .input-group__icon-cb]
-11:59:39.079 INFO - Executing: [click: 12 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .input-group__icon-cb]])
-11:59:39.158 INFO - Done: [click: 12 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .input-group__icon-cb]]
-11:59:39.164 INFO - Executing: [find elements: By.cssSelector: .dialog--active])
-11:59:39.191 INFO - Done: [find elements: By.cssSelector: .dialog--active]
-11:59:39.195 INFO - Executing: [is displayed: 13 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .dialog--active]])
-11:59:39.250 INFO - Done: [is displayed: 13 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .dialog--active]]
-11:59:40.257 INFO - Executing: [find element: By.cssSelector: .btn--flat])
-11:59:40.281 INFO - Done: [find element: By.cssSelector: .btn--flat]
-11:59:40.286 INFO - Executing: [click: 14 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .btn--flat]])
-11:59:40.367 INFO - Done: [click: 14 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: .btn--flat]]
-11:59:41.372 INFO - Executing: [find element: By.cssSelector: #addqst])
-11:59:41.413 INFO - Done: [find element: By.cssSelector: #addqst]
-11:59:41.417 INFO - Executing: [click: 15 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: #addqst]])
-11:59:41.505 INFO - Done: [click: 15 [[ChromeDriver: chrome on XP (13ffa62ae94cb6ec4753c89f7c701e6c)] -> css selector: #addqst]]
-11:59:42.515 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
+10:54:17.208 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+10:54:18.834 INFO - Detected dialect: OSS
+10:54:18.835 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]]
+10:54:18.840 INFO - Executing: [get: http://localhost:8080])
+10:54:20.312 INFO - Done: [get: http://localhost:8080]
+10:54:20.318 INFO - Executing: [find elements: By.cssSelector: #app])
+10:54:20.344 INFO - Done: [find elements: By.cssSelector: #app]
+10:54:20.351 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #app]])
+10:54:20.379 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #app]]
+10:54:20.387 INFO - Executing: [find elements: By.cssSelector: .card])
+10:54:20.415 INFO - Done: [find elements: By.cssSelector: .card]
+10:54:21.422 INFO - Executing: [find element: By.cssSelector: input[type=text]])
+10:54:21.446 INFO - Done: [find element: By.cssSelector: input[type=text]]
+10:54:21.452 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]])
+10:54:21.689 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]]
+10:54:21.695 INFO - Executing: [find element: By.cssSelector: input[type=password]])
+10:54:21.718 INFO - Done: [find element: By.cssSelector: input[type=password]]
+10:54:21.725 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]])
+10:54:22.133 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]]
+10:54:22.138 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
+10:54:22.162 INFO - Done: [find element: By.cssSelector: button[type=submit]]
+10:54:22.166 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: button[type=submit]]])
+10:54:22.241 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: button[type=submit]]]
+10:54:22.248 INFO - Executing: [find elements: By.cssSelector: .application--wrap])
+10:54:22.330 INFO - Done: [find elements: By.cssSelector: .application--wrap]
+10:54:22.335 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]])
+10:54:23.374 WARN - Exception thrown
+org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 113 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=D:\Users\Wadie\AppData\Local\Temp\scoped_dir10708_10146}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f2bf7c5736f1a6aa5b32fe7fcda0cc36
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:315)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
+	at com.sun.proxy.$Proxy5.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:385)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
+	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
+	at org.openqa.selenium.remote.server.handler.GetElementDisplayed.call(GetElementDisplayed.java:32)
+	at org.openqa.selenium.remote.server.handler.GetElementDisplayed.call(GetElementDisplayed.java:23)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10:54:23.405 WARN - Exception: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=66.0.3359.181)
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 113 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=D:\Users\Wadie\AppData\Local\Temp\scoped_dir10708_10146}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: f2bf7c5736f1a6aa5b32fe7fcda0cc36
+10:54:23.519 INFO - Executing: [find elements: By.cssSelector: .application--wrap])
+10:54:23.537 INFO - Done: [find elements: By.cssSelector: .application--wrap]
+10:54:23.545 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]])
+10:54:23.568 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]]
+10:54:24.573 INFO - Executing: [find element: By.cssSelector: a[title="Tests"]])
+10:54:24.601 INFO - Done: [find element: By.cssSelector: a[title="Tests"]]
+10:54:24.606 INFO - Executing: [click: 8 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Tests"]]])
+10:54:24.700 INFO - Done: [click: 8 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Tests"]]]
+10:54:24.709 INFO - Executing: [find elements: By.cssSelector: .datatable])
+10:54:24.735 INFO - Done: [find elements: By.cssSelector: .datatable]
+10:54:25.241 INFO - Executing: [find elements: By.cssSelector: .datatable])
+10:54:25.256 INFO - Done: [find elements: By.cssSelector: .datatable]
+10:54:25.261 INFO - Executing: [is displayed: 9 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .datatable]])
+10:54:25.303 INFO - Done: [is displayed: 9 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .datatable]]
+10:54:25.309 INFO - Executing: [find element: By.cssSelector: .toolbar__side-icon])
+10:54:25.334 INFO - Done: [find element: By.cssSelector: .toolbar__side-icon]
+10:54:25.342 INFO - Executing: [click: 11 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .toolbar__side-icon]])
+10:54:25.454 INFO - Done: [click: 11 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .toolbar__side-icon]]
+10:54:26.460 INFO - Executing: [find element: By.cssSelector: a[title="Create Test"]])
+10:54:26.495 INFO - Done: [find element: By.cssSelector: a[title="Create Test"]]
+10:54:26.499 INFO - Executing: [click: 12 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Create Test"]]])
+10:54:26.591 INFO - Done: [click: 12 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Create Test"]]]
+10:54:27.597 INFO - Executing: [find element: By.cssSelector: .input-group__icon-cb])
+10:54:27.624 INFO - Done: [find element: By.cssSelector: .input-group__icon-cb]
+10:54:27.632 INFO - Executing: [click: 13 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .input-group__icon-cb]])
+10:54:27.768 INFO - Done: [click: 13 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .input-group__icon-cb]]
+10:54:27.774 INFO - Executing: [find elements: By.cssSelector: .dialog--active])
+10:54:27.799 INFO - Done: [find elements: By.cssSelector: .dialog--active]
+10:54:27.803 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .dialog--active]])
+10:54:27.825 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .dialog--active]]
+10:54:28.832 INFO - Executing: [find element: By.cssSelector: .btn--flat])
+10:54:28.857 INFO - Done: [find element: By.cssSelector: .btn--flat]
+10:54:28.861 INFO - Executing: [click: 15 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .btn--flat]])
+10:54:28.964 INFO - Done: [click: 15 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .btn--flat]]
+10:54:29.970 INFO - Executing: [find element: By.cssSelector: #addqst])
+10:54:29.992 INFO - Done: [find element: By.cssSelector: #addqst]
+10:54:29.997 INFO - Executing: [click: 16 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #addqst]])
+10:54:30.090 INFO - Done: [click: 16 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #addqst]]
+10:54:31.127 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
       return document.querySelectorAll(selector).length;
     }.apply(window, passedArgs);, [#addqst]])
-11:59:42.529 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
+10:54:31.153 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
       return document.querySelectorAll(selector).length;
     }.apply(window, passedArgs);, [#addqst]]
-11:59:42.535 INFO - Executing: [delete session: 2057ed63-a36a-4ae9-a000-5cbf13580608])
-11:59:43.354 INFO - Done: [delete session: 2057ed63-a36a-4ae9-a000-5cbf13580608]
+10:54:31.160 INFO - Executing: [delete session: 2097d948-0fc1-418d-9f8b-e3014ce8657e])
+10:54:31.920 INFO - Done: [delete session: 2097d948-0fc1-418d-9f8b-e3014ce8657e]

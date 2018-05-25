@@ -56,8 +56,8 @@ jobs:
             docker-compose up -d
             docker-compose ps
       
-      # - run:
-      #     docker exec -it project_app-backoffice_1 npm run e2e
+      - run:
+          docker exec -it project_app-backoffice_1 npm run e2e
 
       # build and push Docker image
       - run: |
