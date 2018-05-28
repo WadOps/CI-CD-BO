@@ -8,7 +8,11 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN ls && ls /usr/src/app
+RUN npm install && npm cache verify
+
+RUN ls 
+
+RUN ls /usr/src/app
 
 RUN cp /usr/src/app/postcss.config.js /usr/src/app/.node_modules/vuetify/dist/
 
