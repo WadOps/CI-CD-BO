@@ -16,7 +16,7 @@ RUN cp /usr/src/app/postcss.config.js /usr/src/app/node_modules/vuetify/dist/
 
 # ENV NODE_ENV=production
 
-# RUN npm run build
+RUN npm run build
 
 # Remove unused directories
 # RUN rm -rf ./src
