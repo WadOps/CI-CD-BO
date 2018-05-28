@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 
 COPY . /usr/src/app
 
-RUN apt-get nano
+RUN apt-get install nano
 
 RUN npm install && npm cache verify
 
