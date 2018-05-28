@@ -1,4 +1,4 @@
-FROM vuejs/ci
+FROM wadman/vuejs-e2e
 
 EXPOSE 8080
 
@@ -10,14 +10,14 @@ WORKDIR /usr/src/app
 
 RUN npm install && npm cache verify
 
-RUN su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
+# RUN su -c 'echo "deb http://deb.debian.org/debian jessie-backports main" >> /etc/apt/sources.list'
 
-RUN rm -rf /var/lib/apt/lists/* &&\
-    apt-get --yes update &&\
-    apt install --yes -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
+# RUN rm -rf /var/lib/apt/lists/* &&\
+#     apt-get --yes update &&\
+#     apt install --yes -t jessie-backports  openjdk-8-jre-headless ca-certificates-java
 
-RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - &&\
-    sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' &&\
-    apt-get update && apt-get -y install google-chrome-stable
+# RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add - &&\
+#     sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' &&\
+#     apt-get update && apt-get -y install google-chrome-stable
 
 RUN cp /usr/src/app/postcss.config.js /usr/src/app/node_modules/vuetify/dist/
