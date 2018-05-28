@@ -7,7 +7,6 @@ export default {
         return axios.create({
             // baseURL: `http://localhost:1337`,
             baseURL: `http://app-sails:1337`, // for docker env
-            baseURL: `http://app-sails`,
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + store.getters.token ? store.getters.token : ''
@@ -19,7 +18,6 @@ export default {
         return axios.create({
             // baseURL: `http://localhost:1337`,
             baseURL: `http://app-sails:1337`, // for docker env
-            baseURL: `http://app-sails`,
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': 'Bearer ' + store.getters.token ? store.getters.token : ''
