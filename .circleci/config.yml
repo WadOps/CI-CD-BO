@@ -5,9 +5,9 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - develop
+    # branches:
+    #   only:
+    #     - develop #not compatible with workflows
     
     docker:
       # specify the version you desire here
@@ -38,7 +38,7 @@ jobs:
       #         sudo apt-get -y install google-chrome-stable
 
       # run tests!
-      # - run: npm run e2e
+      # - run: npm run e2e # created a custom image where all e2e dependencies are installed
 
       - setup_remote_docker:   
           docker_layer_caching: true 
@@ -65,4 +65,38 @@ jobs:
           docker build -t wadman/circleci-demo-bo:$TAG .
           docker login -u $DOCKER_USER -p $DOCKER_PASS         
           docker push wadman/circleci-demo-bo:$TAG
+  
+  deploy:
+    docker: 
+      - image: protocool/rancher-circleci:latest
+
+    steps:
+      - checkout
+      - run: 
+          rancher-compose --url $RANCHER_URL --access-key $RANCHER_ACCESS_KEY --secret-key $RANCHER_SECRET_KEY
+      - run:
+          rancher-compose -f technical-screening-app/docker-compose.yml -r technical-screening-app/rancher-compose up --upgrade --pull -d app-backoffice
+
+      - run:
+          rancher-compose -f technical-screening-app/docker-compose.yml -r technical-screening-app/rancher-compose up --confirm-upgrade -d app-backoffice
+      
+      - run:
+          when: on_fail
+          command: 
+              rancher-compose -f technical-screening-app/docker-compose.yml -r technical-screening-app/rancher-compose up --rollback -d app-backoffice
+
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - develop
+      - deploy:
+          requires:
+            - build
+
 
