@@ -39,8 +39,8 @@ services:
     links:
     - app-sails:app-sails
     command:
-    - node
-    - server.js
+    - npm
+    - start
     labels:
       io.rancher.container.pull_image: always
   LoadBalencer:

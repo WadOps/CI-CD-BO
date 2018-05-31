@@ -21,3 +21,5 @@ RUN npm install && npm cache verify
 #     apt-get update && apt-get -y install google-chrome-stable
 
 RUN cp /usr/src/app/postcss.config.js /usr/src/app/node_modules/vuetify/dist/
+
+ENV NODE_ENV=ci
