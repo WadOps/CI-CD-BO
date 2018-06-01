@@ -1,91 +1,37 @@
-10:53:43.130 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
-10:53:43.130 INFO - Launching a standalone Selenium Server
-2018-05-25 10:53:43.150:INFO::main: Logging initialized @281ms
-10:53:43.215 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-10:53:43.215 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+13:48:06.165 INFO - Selenium build info: version: '3.0.1', revision: '1969d75'
+13:48:06.165 INFO - Launching a standalone Selenium Server
+2018-06-01 13:48:06.182:INFO::main: Logging initialized @264ms
+13:48:06.243 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:48:06.243 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-10:53:43.215 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-10:53:43.215 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-10:53:43.221 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+13:48:06.243 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:48:06.243 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+13:48:06.250 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
-2018-05-25 10:53:43.260:INFO:osjs.Server:main: jetty-9.2.15.v20160210
-2018-05-25 10:53:43.295:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@6cc4c815{/,null,AVAILABLE}
-2018-05-25 10:53:43.581:INFO:osjs.ServerConnector:main: Started ServerConnector@3ffc5af1{HTTP/1.1}{0.0.0.0:4444}
-2018-05-25 10:53:43.582:INFO:osjs.Server:main: Started @713ms
-10:53:43.582 INFO - Selenium Server is up and running
-10:53:43.916 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-10:53:43.951 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]])
-10:53:43.958 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]
-Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 16977
+2018-06-01 13:48:06.290:INFO:osjs.Server:main: jetty-9.2.15.v20160210
+2018-06-01 13:48:06.326:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@6cc4c815{/,null,AVAILABLE}
+2018-06-01 13:48:06.613:INFO:osjs.ServerConnector:main: Started ServerConnector@3ffc5af1{HTTP/1.1}{0.0.0.0:4444}
+2018-06-01 13:48:06.613:INFO:osjs.Server:main: Started @695ms
+13:48:06.614 INFO - Selenium Server is up and running
+13:48:06.934 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+13:48:06.965 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]])
+13:48:06.972 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]
+Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 1378
 Only local connections are allowed.
-10:53:45.035 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-10:53:46.714 INFO - Detected dialect: OSS
-10:53:46.730 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]]
-10:53:46.743 INFO - Executing: [get: http://localhost:8080])
-10:54:12.543 INFO - Done: [get: http://localhost:8080]
-10:54:12.560 INFO - Executing: [find elements: By.cssSelector: #app])
-10:54:12.663 INFO - Done: [find elements: By.cssSelector: #app]
-10:54:12.672 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: #app]])
-10:54:12.738 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: #app]]
-10:54:12.776 INFO - Executing: [find elements: By.cssSelector: .card])
-10:54:12.806 INFO - Done: [find elements: By.cssSelector: .card]
-10:54:13.814 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
-10:54:13.911 INFO - Done: [find element: By.cssSelector: button[type=submit]]
-10:54:13.917 INFO - Executing: [click: 3 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: button[type=submit]]])
-10:54:14.055 INFO - Done: [click: 3 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: button[type=submit]]]
-10:54:14.063 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-10:54:14.100 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-10:54:14.606 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-10:54:14.622 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-10:54:15.128 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-10:54:15.139 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-10:54:15.647 INFO - Executing: [find elements: By.cssSelector: .snack__wrapper])
-10:54:15.661 INFO - Done: [find elements: By.cssSelector: .snack__wrapper]
-10:54:15.666 INFO - Executing: [is displayed: 4 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: .snack__wrapper]])
-10:54:15.689 INFO - Done: [is displayed: 4 [[ChromeDriver: chrome on XP (e1185a2e30876f05902bce1093f17d9b)] -> css selector: .snack__wrapper]]
-10:54:15.726 INFO - Executing: [delete session: 6fa5894c-8721-46af-85b8-53169d68953c])
-10:54:16.684 INFO - Done: [delete session: 6fa5894c-8721-46af-85b8-53169d68953c]
-10:54:16.701 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]])
-10:54:16.703 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]
-Starting ChromeDriver 2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb) on port 29897
-Only local connections are allowed.
-10:54:17.208 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
-10:54:18.834 INFO - Detected dialect: OSS
-10:54:18.835 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]]
-10:54:18.840 INFO - Executing: [get: http://localhost:8080])
-10:54:20.312 INFO - Done: [get: http://localhost:8080]
-10:54:20.318 INFO - Executing: [find elements: By.cssSelector: #app])
-10:54:20.344 INFO - Done: [find elements: By.cssSelector: #app]
-10:54:20.351 INFO - Executing: [is displayed: 0 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #app]])
-10:54:20.379 INFO - Done: [is displayed: 0 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #app]]
-10:54:20.387 INFO - Executing: [find elements: By.cssSelector: .card])
-10:54:20.415 INFO - Done: [find elements: By.cssSelector: .card]
-10:54:21.422 INFO - Executing: [find element: By.cssSelector: input[type=text]])
-10:54:21.446 INFO - Done: [find element: By.cssSelector: input[type=text]]
-10:54:21.452 INFO - Executing: [send keys: 3 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]])
-10:54:21.689 INFO - Done: [send keys: 3 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=text]], [h, i, d, d, e, n, f, o, u, n, d, e, r, s]]
-10:54:21.695 INFO - Executing: [find element: By.cssSelector: input[type=password]])
-10:54:21.718 INFO - Done: [find element: By.cssSelector: input[type=password]]
-10:54:21.725 INFO - Executing: [send keys: 4 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]])
-10:54:22.133 INFO - Done: [send keys: 4 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: input[type=password]], [%, D, 9, X, u, 6, 4, E, B, =, 2, =, %, z, h, n, 3, 9, 3, 7, a, r, W, W, M, R, ?, k, x, ?, d, 4, *, 8, G, G, p, P, +, M, @, f, H, r, Y, K, s, V, ], s]]
-10:54:22.138 INFO - Executing: [find element: By.cssSelector: button[type=submit]])
-10:54:22.162 INFO - Done: [find element: By.cssSelector: button[type=submit]]
-10:54:22.166 INFO - Executing: [click: 5 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: button[type=submit]]])
-10:54:22.241 INFO - Done: [click: 5 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: button[type=submit]]]
-10:54:22.248 INFO - Executing: [find elements: By.cssSelector: .application--wrap])
-10:54:22.330 INFO - Done: [find elements: By.cssSelector: .application--wrap]
-10:54:22.335 INFO - Executing: [is displayed: 6 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]])
-10:54:23.374 WARN - Exception thrown
-org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
-  (Session info: headless chrome=66.0.3359.181)
+13:48:08.047 INFO - Attempting bi-dialect session, assuming Postel's Law holds true on the remote end
+13:48:08.105 INFO - Detected dialect: OSS
+13:48:08.120 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, name=Test, browserName=chrome, javascriptEnabled=true, chromeOptions={args=[headless, no-sandbox, disable-gpu]}, platform=ANY}]]
+13:48:08.132 INFO - Executing: [get: http://localhost:8080])
+13:48:08.697 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 113 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Command duration or timeout: 11 milliseconds
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
 System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=D:\Users\Wadie\AppData\Local\Temp\scoped_dir10708_10146}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: f2bf7c5736f1a6aa5b32fe7fcda0cc36
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -93,81 +39,499 @@ Session ID: f2bf7c5736f1a6aa5b32fe7fcda0cc36
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:315)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:322)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:331)
-	at com.sun.proxy.$Proxy5.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:385)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
-	at com.sun.proxy.$Proxy6.isDisplayed(Unknown Source)
-	at org.openqa.selenium.remote.server.handler.GetElementDisplayed.call(GetElementDisplayed.java:32)
-	at org.openqa.selenium.remote.server.handler.GetElementDisplayed.call(GetElementDisplayed.java:23)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.get(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.get(EventFiringWebDriver.java:162)
+	at org.openqa.selenium.remote.server.handler.ChangeUrl.call(ChangeUrl.java:40)
+	at org.openqa.selenium.remote.server.handler.ChangeUrl.call(ChangeUrl.java:25)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
-10:54:23.405 WARN - Exception: stale element reference: element is not attached to the page document
-  (Session info: headless chrome=66.0.3359.181)
+13:48:08.701 WARN - Exception: no such session
   (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 113 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Command duration or timeout: 11 milliseconds
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
 System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb), userDataDir=D:\Users\Wadie\AppData\Local\Temp\scoped_dir10708_10146}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=66.0.3359.181, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: f2bf7c5736f1a6aa5b32fe7fcda0cc36
-10:54:23.519 INFO - Executing: [find elements: By.cssSelector: .application--wrap])
-10:54:23.537 INFO - Done: [find elements: By.cssSelector: .application--wrap]
-10:54:23.545 INFO - Executing: [is displayed: 7 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]])
-10:54:23.568 INFO - Done: [is displayed: 7 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .application--wrap]]
-10:54:24.573 INFO - Executing: [find element: By.cssSelector: a[title="Tests"]])
-10:54:24.601 INFO - Done: [find element: By.cssSelector: a[title="Tests"]]
-10:54:24.606 INFO - Executing: [click: 8 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Tests"]]])
-10:54:24.700 INFO - Done: [click: 8 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Tests"]]]
-10:54:24.709 INFO - Executing: [find elements: By.cssSelector: .datatable])
-10:54:24.735 INFO - Done: [find elements: By.cssSelector: .datatable]
-10:54:25.241 INFO - Executing: [find elements: By.cssSelector: .datatable])
-10:54:25.256 INFO - Done: [find elements: By.cssSelector: .datatable]
-10:54:25.261 INFO - Executing: [is displayed: 9 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .datatable]])
-10:54:25.303 INFO - Done: [is displayed: 9 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .datatable]]
-10:54:25.309 INFO - Executing: [find element: By.cssSelector: .toolbar__side-icon])
-10:54:25.334 INFO - Done: [find element: By.cssSelector: .toolbar__side-icon]
-10:54:25.342 INFO - Executing: [click: 11 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .toolbar__side-icon]])
-10:54:25.454 INFO - Done: [click: 11 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .toolbar__side-icon]]
-10:54:26.460 INFO - Executing: [find element: By.cssSelector: a[title="Create Test"]])
-10:54:26.495 INFO - Done: [find element: By.cssSelector: a[title="Create Test"]]
-10:54:26.499 INFO - Executing: [click: 12 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Create Test"]]])
-10:54:26.591 INFO - Done: [click: 12 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: a[title="Create Test"]]]
-10:54:27.597 INFO - Executing: [find element: By.cssSelector: .input-group__icon-cb])
-10:54:27.624 INFO - Done: [find element: By.cssSelector: .input-group__icon-cb]
-10:54:27.632 INFO - Executing: [click: 13 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .input-group__icon-cb]])
-10:54:27.768 INFO - Done: [click: 13 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .input-group__icon-cb]]
-10:54:27.774 INFO - Executing: [find elements: By.cssSelector: .dialog--active])
-10:54:27.799 INFO - Done: [find elements: By.cssSelector: .dialog--active]
-10:54:27.803 INFO - Executing: [is displayed: 14 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .dialog--active]])
-10:54:27.825 INFO - Done: [is displayed: 14 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .dialog--active]]
-10:54:28.832 INFO - Executing: [find element: By.cssSelector: .btn--flat])
-10:54:28.857 INFO - Done: [find element: By.cssSelector: .btn--flat]
-10:54:28.861 INFO - Executing: [click: 15 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .btn--flat]])
-10:54:28.964 INFO - Done: [click: 15 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: .btn--flat]]
-10:54:29.970 INFO - Executing: [find element: By.cssSelector: #addqst])
-10:54:29.992 INFO - Done: [find element: By.cssSelector: #addqst]
-10:54:29.997 INFO - Executing: [click: 16 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #addqst]])
-10:54:30.090 INFO - Done: [click: 16 [[ChromeDriver: chrome on XP (f2bf7c5736f1a6aa5b32fe7fcda0cc36)] -> css selector: #addqst]]
-10:54:31.127 INFO - Executing: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
-      return document.querySelectorAll(selector).length;
-    }.apply(window, passedArgs);, [#addqst]])
-10:54:31.153 INFO - Done: [execute script: var passedArgs = Array.prototype.slice.call(arguments,0); return function (selector) {
-      return document.querySelectorAll(selector).length;
-    }.apply(window, passedArgs);, [#addqst]]
-10:54:31.160 INFO - Executing: [delete session: 2097d948-0fc1-418d-9f8b-e3014ce8657e])
-10:54:31.920 INFO - Done: [delete session: 2097d948-0fc1-418d-9f8b-e3014ce8657e]
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+13:48:08.805 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:09.275 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:09.277 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:09.834 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:10.279 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:10.280 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:10.826 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:11.310 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:11.311 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:11.853 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:12.431 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:12.434 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:12.981 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:13.462 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:13.463 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 6 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:14.009 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:14.568 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:14.569 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:15.116 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:15.633 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:15.634 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:16.171 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:16.764 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:16.765 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:17.298 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:17.834 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:17.836 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:18.371 INFO - Executing: [find elements: By.cssSelector: #app])
+13:48:18.877 WARN - Exception thrown
+org.openqa.selenium.NoSuchSessionException: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:393)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByCssSelector(RemoteWebDriver.java:469)
+	at org.openqa.selenium.By$ByCssSelector.findElements(By.java:441)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:356)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$2.invoke(EventFiringWebDriver.java:103)
+	at com.sun.proxy.$Proxy4.findElements(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver.findElements(EventFiringWebDriver.java:176)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:50)
+	at org.openqa.selenium.remote.server.handler.FindElements.call(FindElements.java:35)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+13:48:18.878 WARN - Exception: no such session
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 4 milliseconds
+Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
+System info: host: 'Wad', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{message=unknown error: cannot find Chrome binary
+  (Driver info: chromedriver=2.38.552522 (437e6fbedfa8762dec75e2c5b3ddb86763dc9dcb),platform=Windows NT 10.0.17134 x86_64), platform=ANY}]
+Session ID: a978d0d765fd25d6fd06a83eda06de05
+*** Element info: {Using=css selector, value=#app}
+13:48:18.931 INFO - Executing: [delete session: a81afa49-29d5-44e8-9c51-f7f1843b308a])
+13:48:19.779 INFO - Done: [delete session: a81afa49-29d5-44e8-9c51-f7f1843b308a]

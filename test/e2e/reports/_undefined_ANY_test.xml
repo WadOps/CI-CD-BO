@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="2">
+
+  <testsuite name="test"
+    errors="0" failures="1" hostname="" id="" package="test" skipped="1"
+    tests="2" time="13.01" timestamp="Fri, 01 Jun 2018 13:48:06 GMT">
+  
+    <testcase name="login tests" time="13.01" assertions="1">  <failure message="Timed out while waiting for element &lt;#app&gt; to be present for 10000 milliseconds.">    at Object.loginTests [as login tests] (D:/Users/Wadie/Projects/quiz-app-backoffice/test/e2e/specs/test.js:14:8)
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)</failure>
+
+    
+    </testcase>
+  
+  
+    
+    <testcase
+      name="after auth tests">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>
